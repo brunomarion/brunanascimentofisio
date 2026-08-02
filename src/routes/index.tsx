@@ -558,7 +558,7 @@ function Index() {
       <section className="px-5 pb-20 lg:pb-28">
         <Reveal className="gradient-brand mx-auto max-w-6xl rounded-[2.5rem] px-8 py-16 text-center sm:px-16">
           <h2 className="mx-auto max-w-2xl text-3xl leading-tight text-primary-foreground sm:text-4xl">
-            Agende sua avaliação com Bruna Nascimento.
+            Agende sua avaliação agora mesmo.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-balance-pretty text-sm leading-relaxed text-primary-foreground/90 sm:text-base">
             Dê o primeiro passo para uma recuperação mais tranquila, saudável e segura com o
