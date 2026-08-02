@@ -457,7 +457,7 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl leading-tight text-secondary-foreground sm:text-4xl">
-              Por que escolher o atendimento da Bruna Nascimento?
+              Por que escolher o atendimento da Bruna?
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
