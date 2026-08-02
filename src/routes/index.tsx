@@ -110,9 +110,9 @@ function MobileMenu() {
 }
 
 const TITLE =
-  "Bruna Nascimento | Fisioterapeuta DermatoFuncional em João Pessoa | Pós-Parto, Pré e Pós Operatório, Laserterapia, Taping Terapêutico e Tratamento de Estrias";
+  "Bruna Nascimento | Fisioterapeuta Dermatofuncional em João Pessoa | Pós-Parto, Pré e Pós Operatório, Laserterapia, Taping Terapêutico e Tratamento de Estrias";
 const DESCRIPTION =
-  "Bruna Nascimento é Fisioterapeuta DermatoFuncional em João Pessoa, especializada no cuidado com a mulher. Atendimento humanizado em pós-parto, pré e pós-operatório, laserterapia, taping terapêutico e tratamento de estrias. Agende sua avaliação.";
+  "Bruna Nascimento é Fisioterapeuta Dermatofuncional em João Pessoa, especializada no cuidado com a mulher. Atendimento humanizado em pós-parto, pré e pós-operatório, laserterapia, taping terapêutico e tratamento de estrias. Agende sua avaliação.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -409,9 +409,9 @@ function Index() {
             <h2 className="mt-4 hidden text-3xl leading-tight sm:text-4xl lg:block">
               Muito além da estética. Um cuidado completo para a saúde da mulher.
             </h2>
-            <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground">
+            <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-justify">
               <p>
-                Bruna Nascimento é Fisioterapeuta DermatoFuncional especializada no cuidado com a
+                Bruna Nascimento é Fisioterapeuta Dermatofuncional especializada no cuidado com a
                 mulher, oferecendo tratamentos personalizados para promover saúde, recuperação,
                 bem-estar e autoestima.
               </p>
