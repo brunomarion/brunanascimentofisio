@@ -19,7 +19,6 @@ import {
   HandHeart,
   HeartPulse,
   Instagram,
-  LineChart,
   MapPin,
   MessageCircle,
   Ribbon,
