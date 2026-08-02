@@ -387,7 +387,7 @@ function Index() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal className="order-2 lg:order-1">
             <img
-              src={atendimento}
+              src={sobreAsset.url}
               alt="Bruna Nascimento realizando atendimento de fisioterapia dermatofuncional"
               loading="lazy"
               width={1200}
