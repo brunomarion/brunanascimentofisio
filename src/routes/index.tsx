@@ -366,7 +366,7 @@ function Index() {
             </Reveal>
           </div>
 
-          <Reveal delay={120} className="relative">
+          <Reveal delay={120} className="relative hidden lg:block">
             <div
               aria-hidden
               className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
