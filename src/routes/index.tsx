@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -6,9 +7,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Reveal } from "@/components/Reveal";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import brunaAsset from "@/assets/bruna-perfil.png.asset.json";
 import logoAsset from "@/assets/logo.jpg.asset.json";
-import atendimento from "@/assets/atendimento.jpg";
+import sobreAsset from "@/assets/sobre-atendimento.png.asset.json";
 import dep1 from "@/assets/dep-1.jpg";
 import dep2 from "@/assets/dep-2.jpg";
 import dep3 from "@/assets/dep-3.jpg";
@@ -20,6 +22,7 @@ import {
   HeartPulse,
   Instagram,
   MapPin,
+  Menu,
   MessageCircle,
   Ribbon,
   ScanHeart,
@@ -27,11 +30,84 @@ import {
   Stethoscope,
   Sun,
   Waves,
+  X,
 } from "lucide-react";
 
 const WHATSAPP =
   "https://wa.me/5583999072800?text=Ol%C3%A1%2C%20Bruna!%20%F0%9F%98%8A%20Encontrei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos%3F";
 const INSTAGRAM = "https://www.instagram.com/brunanascimento_fisio";
+
+const menuLinks = [
+  { label: "Início", href: "#inicio" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Especialidades", href: "#especialidades" },
+  { label: "Benefícios", href: "#beneficios" },
+  { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Diferenciais", href: "#diferenciais" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contato", href: "#contato" },
+];
+
+function MobileMenu() {
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onClick = (event: MouseEvent) => {
+      if (!containerRef.current?.contains(event.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, [open]);
+
+  return (
+    <div ref={containerRef} className="md:hidden">
+      <div className="flex shrink-0 items-center gap-2">
+        <a
+          href={WHATSAPP}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-card transition-all duration-300 hover:opacity-90"
+        >
+          Agendar
+        </a>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/25 text-primary transition-colors hover:bg-secondary/60"
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+
+      <div
+        className={`absolute left-0 right-0 top-full origin-top overflow-hidden border-b border-border/60 bg-background transition-all duration-300 ease-out ${
+          open ? "max-h-[32rem] opacity-100" : "pointer-events-none max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="mx-auto max-w-6xl px-5 py-4">
+          <ul className="divide-y divide-border/60">
+            {menuLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block py-3 font-display text-base text-foreground/85 transition-colors hover:text-primary"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  );
+}
 
 const TITLE =
   "Bruna Nascimento | Fisioterapeuta DermatoFuncional em João Pessoa | Pós-Parto, Pré e Pós Operatório, Laserterapia, Taping Terapêutico e Tratamento de Estrias";
@@ -170,7 +246,7 @@ function Index() {
       </a>
 
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:flex sm:justify-between">
+        <div className="relative mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:flex sm:justify-between">
           <img
             src={logoAsset.url}
             alt="Logo Bruna Nascimento Fisioterapia Especializada"
@@ -178,27 +254,18 @@ function Index() {
             width={240}
             height={72}
           />
-          <nav className="flex shrink-0 items-center gap-5">
+          <nav className="hidden shrink-0 items-center gap-5 md:flex">
             <a
               href="#especialidades"
-              className="hidden text-sm text-muted-foreground transition-colors hover:text-primary md:inline"
+              className="text-sm text-muted-foreground transition-colors hover:text-primary"
             >
               Especialidades
             </a>
             <a
               href="#sobre"
-              className="hidden text-sm text-muted-foreground transition-colors hover:text-primary md:inline"
+              className="text-sm text-muted-foreground transition-colors hover:text-primary"
             >
               Sobre
-            </a>
-            <a
-              href={INSTAGRAM}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram de Bruna Nascimento"
-              className="text-muted-foreground transition-colors hover:text-primary"
-            >
-              <Instagram className="h-5 w-5" />
             </a>
             <a
               href={WHATSAPP}
@@ -209,11 +276,12 @@ function Index() {
               Agendar
             </a>
           </nav>
+          <MobileMenu />
         </div>
       </header>
 
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section id="inicio" className="relative overflow-hidden">
         <div
           aria-hidden
           className="gradient-brand pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full opacity-25 blur-3xl"
@@ -237,6 +305,22 @@ function Index() {
                 Fisioterapeuta DermatoFuncional especialista no cuidado com a mulher.
               </p>
             </Reveal>
+
+            {/* Imagem no mobile: aparece logo após a frase (desktop mantém a imagem na coluna direita) */}
+            <Reveal delay={120} className="relative mt-8 lg:hidden">
+              <div
+                aria-hidden
+                className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
+              />
+              <img
+                src={brunaAsset.url}
+                alt="Bruna Nascimento, fisioterapeuta dermatofuncional, em sua clínica em João Pessoa"
+                width={1152}
+                height={1379}
+                className="relative w-full rounded-[2.5rem] object-cover shadow-soft"
+              />
+            </Reveal>
+
 
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-balance-pretty text-base leading-relaxed text-muted-foreground">
@@ -282,7 +366,7 @@ function Index() {
             </Reveal>
           </div>
 
-          <Reveal delay={120} className="relative">
+          <Reveal delay={120} className="relative hidden lg:block">
             <div
               aria-hidden
               className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
@@ -303,7 +387,7 @@ function Index() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal className="order-2 lg:order-1">
             <img
-              src={atendimento}
+              src={sobreAsset.url}
               alt="Bruna Nascimento realizando atendimento de fisioterapia dermatofuncional"
               loading="lazy"
               width={1200}
@@ -360,7 +444,7 @@ function Index() {
       </section>
 
       {/* BENEFÍCIOS */}
-      <section className="bg-secondary py-20 lg:py-28">
+      <section id="beneficios" className="bg-secondary py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl leading-tight text-secondary-foreground sm:text-4xl">
@@ -385,7 +469,7 @@ function Index() {
       </section>
 
       {/* COMO FUNCIONA */}
-      <section className="mx-auto max-w-4xl px-5 py-20 lg:py-28">
+      <section id="como-funciona" className="mx-auto max-w-4xl px-5 py-20 lg:py-28">
         <Reveal className="text-center">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Como funciona</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Um caminho simples e cuidadoso</h2>
@@ -404,7 +488,7 @@ function Index() {
       </section>
 
       {/* DIFERENCIAIS */}
-      <section className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
+      <section id="diferenciais" className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Diferenciais</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Cuidado de alto padrão em cada detalhe</h2>
@@ -427,7 +511,7 @@ function Index() {
       </section>
 
       {/* DEPOIMENTOS */}
-      <section className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
+      <section id="depoimentos" className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Depoimentos</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Histórias de quem se sentiu cuidada</h2>
@@ -484,7 +568,7 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="mx-auto max-w-3xl px-5 pb-20 lg:pb-28">
+      <section id="faq" className="mx-auto max-w-3xl px-5 pb-20 lg:pb-28">
         <Reveal className="text-center">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Dúvidas</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Perguntas frequentes</h2>
@@ -506,7 +590,7 @@ function Index() {
       </section>
 
       {/* RODAPÉ */}
-      <footer className="gradient-soft border-t border-border">
+      <footer id="contato" className="gradient-soft border-t border-border">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-3">
           <div>
             <img
@@ -591,7 +675,7 @@ function Index() {
         aria-label="Falar no WhatsApp com Bruna Nascimento"
         className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-1 hover:opacity-90"
       >
-        <MessageCircle className="h-6 w-6" />
+        <WhatsAppIcon className="h-7 w-7" />
       </a>
     </div>
   );
