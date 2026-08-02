@@ -9,7 +9,7 @@ import {
 import { Reveal } from "@/components/Reveal";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import brunaAsset from "@/assets/bruna-perfil.png.asset.json";
-import logoAsset from "@/assets/logo.jpg.asset.json";
+import logoAsset from "@/assets/logo-bn.png.asset.json";
 import sobreAsset from "@/assets/sobre-atendimento.png.asset.json";
 import dep1 from "@/assets/dep-1.jpg";
 import dep2 from "@/assets/dep-2.jpg";
@@ -250,9 +250,9 @@ function Index() {
           <img
             src={logoAsset.url}
             alt="Logo Bruna Nascimento Fisioterapia Especializada"
-            className="h-10 w-auto rounded-md sm:h-12"
-            width={240}
-            height={72}
+            className="h-11 w-auto sm:h-14"
+            width={893}
+            height={243}
           />
           <nav className="hidden shrink-0 items-center gap-5 md:flex">
             <a
@@ -384,8 +384,15 @@ function Index() {
 
       {/* SOBRE */}
       <section id="sobre" className="mx-auto max-w-6xl px-5 py-20 lg:py-28">
-        <div className="grid items-center gap-14 lg:grid-cols-2">
-          <Reveal className="order-2 lg:order-1">
+        {/* Mobile: título aparece antes da imagem (desktop mantém o layout original) */}
+        <Reveal className="lg:hidden">
+          <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre</span>
+          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
+            Muito além da estética. Um cuidado completo para a saúde da mulher.
+          </h2>
+        </Reveal>
+        <div className="mt-10 grid items-center gap-14 lg:mt-0 lg:grid-cols-2">
+          <Reveal className="order-1">
             <img
               src={sobreAsset.url}
               alt="Bruna Nascimento realizando atendimento de fisioterapia dermatofuncional"
@@ -395,9 +402,11 @@ function Index() {
               className="w-full rounded-[2rem] object-cover shadow-card"
             />
           </Reveal>
-          <Reveal delay={100} className="order-1 lg:order-2">
-            <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre</span>
-            <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
+          <Reveal delay={100} className="order-2">
+            <span className="hidden text-xs uppercase tracking-[0.25em] text-primary lg:inline">
+              Sobre
+            </span>
+            <h2 className="mt-4 hidden text-3xl leading-tight sm:text-4xl lg:block">
               Muito além da estética. Um cuidado completo para a saúde da mulher.
             </h2>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground">
@@ -597,9 +606,9 @@ function Index() {
               src={logoAsset.url}
               alt="Logo Bruna Nascimento"
               loading="lazy"
-              width={280}
-              height={84}
-              className="h-14 w-auto rounded-lg"
+              width={893}
+              height={243}
+              className="h-16 w-auto"
             />
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
               Fisioterapeuta DermatoFuncional
