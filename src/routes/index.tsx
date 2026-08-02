@@ -246,7 +246,7 @@ function Index() {
       </a>
 
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:flex sm:justify-between">
+        <div className="relative mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:flex sm:justify-between">
           <img
             src={logoAsset.url}
             alt="Logo Bruna Nascimento Fisioterapia Especializada"
@@ -254,27 +254,18 @@ function Index() {
             width={240}
             height={72}
           />
-          <nav className="flex shrink-0 items-center gap-5">
+          <nav className="hidden shrink-0 items-center gap-5 md:flex">
             <a
               href="#especialidades"
-              className="hidden text-sm text-muted-foreground transition-colors hover:text-primary md:inline"
+              className="text-sm text-muted-foreground transition-colors hover:text-primary"
             >
               Especialidades
             </a>
             <a
               href="#sobre"
-              className="hidden text-sm text-muted-foreground transition-colors hover:text-primary md:inline"
+              className="text-sm text-muted-foreground transition-colors hover:text-primary"
             >
               Sobre
-            </a>
-            <a
-              href={INSTAGRAM}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram de Bruna Nascimento"
-              className="text-muted-foreground transition-colors hover:text-primary"
-            >
-              <Instagram className="h-5 w-5" />
             </a>
             <a
               href={WHATSAPP}
@@ -285,11 +276,12 @@ function Index() {
               Agendar
             </a>
           </nav>
+          <MobileMenu />
         </div>
       </header>
 
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section id="inicio" className="relative overflow-hidden">
         <div
           aria-hidden
           className="gradient-brand pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full opacity-25 blur-3xl"
