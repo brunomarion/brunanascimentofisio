@@ -406,12 +406,12 @@ function Index() {
             <span className="hidden text-xs uppercase tracking-[0.25em] text-primary lg:inline">
               Sobre
             </span>
-            <h2 className="mt-4 hidden text-3xl leading-tight sm:text-4xl lg:block">
+            <h2 className="mt-4 hidden text-3xl leading-tight sm:text-4xl lg:block text-justify">
               Muito além da estética. Um cuidado completo para a saúde da mulher.
             </h2>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-justify">
               <p>
-                Bruna Nascimento é Fisioterapeuta Dermatofuncional especializada no cuidado com a
+                Eu sou Bruna Nascimento, Fisioterapeuta Dermatofuncional especializada no cuidado com a
                 mulher, oferecendo tratamentos personalizados para promover saúde, recuperação,
                 bem-estar e autoestima.
               </p>
