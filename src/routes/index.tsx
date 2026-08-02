@@ -190,7 +190,6 @@ const etapas = [
 
 const diferenciais = [
   { icon: HandHeart, title: "Atendimento Individualizado" },
-  { icon: Waves, title: "Ambiente Acolhedor" },
   { icon: Sparkles, title: "Técnicas Atualizadas" },
   { icon: ClipboardList, title: "Protocolos Personalizados" },
   { icon: HeartPulse, title: "Atendimento Humanizado" },
@@ -416,13 +415,13 @@ function Index() {
                 bem-estar e autoestima.
               </p>
               <p>
-                Seu atendimento é pautado em uma abordagem humanizada, aliando conhecimento
+                Meu atendimento é pautado em uma abordagem humanizada, aliando conhecimento
                 científico, técnicas modernas e acompanhamento individualizado para garantir
                 resultados seguros e eficientes.
               </p>
               <p>
                 Cada paciente recebe um plano de tratamento exclusivo, respeitando suas
-                necessidades, objetivos e fase de recuperação.
+                necessidades, objetivos e adaptado para cada fase de recuperação.
               </p>
             </div>
           </Reveal>
@@ -432,7 +431,7 @@ function Index() {
       {/* ESPECIALIDADES */}
       <section id="especialidades" className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="text-xs uppercase tracking-[0.25em] text-primary">Especialidades</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-primary">Minhas Especialidades</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Tratamentos com propósito e precisão</h2>
         </Reveal>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -480,7 +479,7 @@ function Index() {
       {/* COMO FUNCIONA */}
       <section id="como-funciona" className="mx-auto max-w-4xl px-5 py-20 lg:py-28">
         <Reveal className="text-center">
-          <span className="text-xs uppercase tracking-[0.25em] text-primary">Como funciona</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-primary">Como funcionam as consultas</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Um caminho simples e cuidadoso</h2>
         </Reveal>
         <ol className="relative mt-14 space-y-10 border-l border-border pl-10">
