@@ -386,7 +386,7 @@ function Index() {
       <section id="sobre" className="mx-auto max-w-6xl px-5 py-20 lg:py-28">
         {/* Mobile: título aparece antes da imagem (desktop mantém o layout original) */}
         <Reveal className="lg:hidden">
-          <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre mim</span>
           <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
             Muito além da estética. Um cuidado completo para a saúde da mulher.
           </h2>
@@ -404,12 +404,12 @@ function Index() {
           </Reveal>
           <Reveal delay={100} className="order-2">
             <span className="hidden text-xs uppercase tracking-[0.25em] text-primary lg:inline">
-              Sobre
+              Sobre mim
             </span>
             <h2 className="mt-4 hidden text-3xl leading-tight sm:text-4xl lg:block text-justify">
               Muito além da estética. Um cuidado completo para a saúde da mulher.
             </h2>
-            <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-justify">
+            <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-justify px-4">
               <p>
                 Eu sou Bruna Nascimento, Fisioterapeuta Dermatofuncional especializada no cuidado com a
                 mulher, oferecendo tratamentos personalizados para promover saúde, recuperação,
