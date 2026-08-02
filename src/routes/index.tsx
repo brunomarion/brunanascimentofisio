@@ -306,6 +306,22 @@ function Index() {
               </p>
             </Reveal>
 
+            {/* Imagem no mobile: aparece logo após a frase (desktop mantém a imagem na coluna direita) */}
+            <Reveal delay={120} className="relative mt-8 lg:hidden">
+              <div
+                aria-hidden
+                className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
+              />
+              <img
+                src={brunaAsset.url}
+                alt="Bruna Nascimento, fisioterapeuta dermatofuncional, em sua clínica em João Pessoa"
+                width={1152}
+                height={1379}
+                className="relative w-full rounded-[2.5rem] object-cover shadow-soft"
+              />
+            </Reveal>
+
+
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-balance-pretty text-base leading-relaxed text-muted-foreground">
                 Recupere sua autoestima, acelere sua recuperação e cuide do seu corpo com um
