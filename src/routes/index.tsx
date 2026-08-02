@@ -384,8 +384,15 @@ function Index() {
 
       {/* SOBRE */}
       <section id="sobre" className="mx-auto max-w-6xl px-5 py-20 lg:py-28">
-        <div className="grid items-center gap-14 lg:grid-cols-2">
-          <Reveal className="order-2 lg:order-1">
+        {/* Mobile: título aparece antes da imagem (desktop mantém o layout original) */}
+        <Reveal className="lg:hidden">
+          <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre</span>
+          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
+            Muito além da estética. Um cuidado completo para a saúde da mulher.
+          </h2>
+        </Reveal>
+        <div className="mt-10 grid items-center gap-14 lg:mt-0 lg:grid-cols-2">
+          <Reveal className="order-1">
             <img
               src={sobreAsset.url}
               alt="Bruna Nascimento realizando atendimento de fisioterapia dermatofuncional"
@@ -395,9 +402,11 @@ function Index() {
               className="w-full rounded-[2rem] object-cover shadow-card"
             />
           </Reveal>
-          <Reveal delay={100} className="order-1 lg:order-2">
-            <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre</span>
-            <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
+          <Reveal delay={100} className="order-2">
+            <span className="hidden text-xs uppercase tracking-[0.25em] text-primary lg:inline">
+              Sobre
+            </span>
+            <h2 className="mt-4 hidden text-3xl leading-tight sm:text-4xl lg:block">
               Muito além da estética. Um cuidado completo para a saúde da mulher.
             </h2>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground">
