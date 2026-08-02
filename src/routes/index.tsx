@@ -274,15 +274,6 @@ function Index() {
                 >
                   Agendar Avaliação
                 </a>
-                <a
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/35 px-8 py-4 text-sm font-medium text-primary transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary/60"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  Falar pelo WhatsApp
-                </a>
               </div>
               <p className="mt-5 flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-primary" />
