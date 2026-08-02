@@ -444,7 +444,7 @@ function Index() {
       </section>
 
       {/* BENEFÍCIOS */}
-      <section className="bg-secondary py-20 lg:py-28">
+      <section id="beneficios" className="bg-secondary py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl leading-tight text-secondary-foreground sm:text-4xl">
@@ -469,7 +469,7 @@ function Index() {
       </section>
 
       {/* COMO FUNCIONA */}
-      <section className="mx-auto max-w-4xl px-5 py-20 lg:py-28">
+      <section id="como-funciona" className="mx-auto max-w-4xl px-5 py-20 lg:py-28">
         <Reveal className="text-center">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Como funciona</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Um caminho simples e cuidadoso</h2>
@@ -488,7 +488,7 @@ function Index() {
       </section>
 
       {/* DIFERENCIAIS */}
-      <section className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
+      <section id="diferenciais" className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Diferenciais</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Cuidado de alto padrão em cada detalhe</h2>
@@ -511,7 +511,7 @@ function Index() {
       </section>
 
       {/* DEPOIMENTOS */}
-      <section className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
+      <section id="depoimentos" className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Depoimentos</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Histórias de quem se sentiu cuidada</h2>
@@ -568,7 +568,7 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="mx-auto max-w-3xl px-5 pb-20 lg:pb-28">
+      <section id="faq" className="mx-auto max-w-3xl px-5 pb-20 lg:pb-28">
         <Reveal className="text-center">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Dúvidas</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Perguntas frequentes</h2>
@@ -590,7 +590,7 @@ function Index() {
       </section>
 
       {/* RODAPÉ */}
-      <footer className="gradient-soft border-t border-border">
+      <footer id="contato" className="gradient-soft border-t border-border">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-3">
           <div>
             <img
@@ -675,7 +675,7 @@ function Index() {
         aria-label="Falar no WhatsApp com Bruna Nascimento"
         className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-1 hover:opacity-90"
       >
-        <MessageCircle className="h-6 w-6" />
+        <WhatsAppIcon className="h-7 w-7" />
       </a>
     </div>
   );
