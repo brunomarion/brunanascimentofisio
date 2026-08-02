@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -6,9 +7,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Reveal } from "@/components/Reveal";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import brunaAsset from "@/assets/bruna-perfil.png.asset.json";
 import logoAsset from "@/assets/logo.jpg.asset.json";
-import atendimento from "@/assets/atendimento.jpg";
+import sobreAsset from "@/assets/sobre-atendimento.png.asset.json";
 import dep1 from "@/assets/dep-1.jpg";
 import dep2 from "@/assets/dep-2.jpg";
 import dep3 from "@/assets/dep-3.jpg";
@@ -20,6 +22,7 @@ import {
   HeartPulse,
   Instagram,
   MapPin,
+  Menu,
   MessageCircle,
   Ribbon,
   ScanHeart,
@@ -27,11 +30,84 @@ import {
   Stethoscope,
   Sun,
   Waves,
+  X,
 } from "lucide-react";
 
 const WHATSAPP =
   "https://wa.me/5583999072800?text=Ol%C3%A1%2C%20Bruna!%20%F0%9F%98%8A%20Encontrei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos%3F";
 const INSTAGRAM = "https://www.instagram.com/brunanascimento_fisio";
+
+const menuLinks = [
+  { label: "Início", href: "#inicio" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Especialidades", href: "#especialidades" },
+  { label: "Benefícios", href: "#beneficios" },
+  { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Diferenciais", href: "#diferenciais" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contato", href: "#contato" },
+];
+
+function MobileMenu() {
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onClick = (event: MouseEvent) => {
+      if (!containerRef.current?.contains(event.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, [open]);
+
+  return (
+    <div ref={containerRef} className="md:hidden">
+      <div className="flex shrink-0 items-center gap-2">
+        <a
+          href={WHATSAPP}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-card transition-all duration-300 hover:opacity-90"
+        >
+          Agendar
+        </a>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/25 text-primary transition-colors hover:bg-secondary/60"
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+
+      <div
+        className={`absolute left-0 right-0 top-full origin-top overflow-hidden border-b border-border/60 bg-background transition-all duration-300 ease-out ${
+          open ? "max-h-[32rem] opacity-100" : "pointer-events-none max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="mx-auto max-w-6xl px-5 py-4">
+          <ul className="divide-y divide-border/60">
+            {menuLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block py-3 font-display text-base text-foreground/85 transition-colors hover:text-primary"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  );
+}
 
 const TITLE =
   "Bruna Nascimento | Fisioterapeuta DermatoFuncional em João Pessoa | Pós-Parto, Pré e Pós Operatório, Laserterapia, Taping Terapêutico e Tratamento de Estrias";
