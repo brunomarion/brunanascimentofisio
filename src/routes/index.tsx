@@ -301,7 +301,7 @@ function Index() {
                 Bruna Nascimento
               </h1>
               <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
-                Fisioterapeuta Dermatofuncional especialista no cuidado com a mulher.
+                Fisioterapeuta Dermatofuncional Especialista no cuidado com a mulher
               </p>
             </Reveal>
 
