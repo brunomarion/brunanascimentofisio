@@ -420,8 +420,8 @@ function Index() {
                 resultados seguros e eficientes.
               </p>
               <p>
-                Cada paciente recebe um plano de tratamento exclusivo, respeitando suas
-                necessidades, objetivos e adaptado para cada fase de recuperação.
+                Cada paciente recebe um plano de tratamento exclusivo, <strong>respeitando suas
+                necessidades, objetivos e adaptado</strong> para cada fase de recuperação.
               </p>
             </div>
           </Reveal>
