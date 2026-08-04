@@ -42,7 +42,7 @@ const menuLinks = [
   { label: "Sobre", href: "#sobre" },
   { label: "Especialidades", href: "#especialidades" },
   { label: "Benefícios", href: "#beneficios" },
-  { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Consultas", href: "#como-funciona" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "FAQ", href: "#faq" },
@@ -253,26 +253,23 @@ function Index() {
             width={893}
             height={243}
           />
-          <nav className="hidden shrink-0 items-center gap-5 md:flex">
-            <a
-              href="#especialidades"
-              className="text-sm text-muted-foreground transition-colors hover:text-primary"
-            >
-              Especialidades
-            </a>
-            <a
-              href="#sobre"
-              className="text-sm text-muted-foreground transition-colors hover:text-primary"
-            >
-              Sobre
-            </a>
+          <nav className="hidden shrink-0 items-center gap-x-3 md:flex lg:gap-x-5">
+            {menuLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="whitespace-nowrap text-[13px] text-muted-foreground transition-colors hover:text-primary lg:text-sm"
+              >
+                {link.label}
+              </a>
+            ))}
             <a
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90"
+              className="whitespace-nowrap rounded-full bg-primary px-4 py-2.5 text-[13px] font-medium text-primary-foreground shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90 lg:px-5 lg:text-sm"
             >
-              Agendar
+              Agendar Avaliação
             </a>
           </nav>
           <MobileMenu />
