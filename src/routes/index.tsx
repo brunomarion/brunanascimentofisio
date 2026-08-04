@@ -391,14 +391,18 @@ function Index() {
           </h2>
         </Reveal>
         <div className="mt-10 grid items-center gap-14 lg:mt-0 lg:grid-cols-2">
-          <Reveal className="order-1">
+          <Reveal className="relative order-1">
+            <div
+              aria-hidden
+              className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
+            />
             <img
               src={sobreAsset.url}
               alt="Bruna Nascimento realizando atendimento de fisioterapia dermatofuncional"
               loading="lazy"
               width={1200}
               height={1400}
-              className="w-full rounded-[2rem] object-cover shadow-card"
+              className="relative w-full rounded-[2.5rem] object-cover shadow-soft"
             />
           </Reveal>
           <Reveal delay={100} className="order-2">
