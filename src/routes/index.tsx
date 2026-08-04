@@ -410,13 +410,13 @@ function Index() {
             </h2>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-start">
               <p>
-                Eu sou Bruna Nascimento, Fisioterapeuta Dermatofuncional especializada no cuidado com a
-                mulher, oferecendo tratamentos personalizados para promover saúde, recuperação,
-                bem-estar e autoestima.
+                Eu sou Bruna Nascimento, <strong>Fisioterapeuta Dermatofuncional</strong> especializada no cuidado com a
+                mulher, oferecendo tratamentos personalizados para promover <strong>saúde, recuperação,
+                bem-estar e autoestima.</strong>
               </p>
               <p>
                 Meu atendimento é pautado em uma abordagem humanizada, aliando conhecimento
-                científico, técnicas modernas e acompanhamento individualizado para garantir
+                científico, <strong>técnicas modernas e acompanhamento individualizado</strong> para garantir
                 resultados seguros e eficientes.
               </p>
               <p>
