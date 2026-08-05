@@ -445,7 +445,7 @@ function Index() {
               Sobre mim
             </span>
             <h2 className="mt-4 hidden text-3xl leading-tight sm:text-4xl lg:block text-justify">
-              Muito além da estética. Um cuidado completo para a saúde da mulher.
+              "Você merece um atendimento que acolhe, cuida e transforma."
             </h2>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-start">
               <p>
