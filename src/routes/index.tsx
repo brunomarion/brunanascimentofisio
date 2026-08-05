@@ -319,8 +319,8 @@ function Index() {
                 Bruna Nascimento
               </h3>
               <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
-                <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm">
-                  <Sparkles className="h-4 w-4 shrink-0 text-primary font-sans" />
+                <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
+                  <Sparkles className="h-4 w-4 shrink-0 text-primary "/>
                    Fisioterapeuta Dermatofuncional | CREFº 300708-F
                 </Reveal>
               </p>
@@ -328,7 +328,7 @@ function Index() {
 
             {/* Frase de destaque premium — desktop mantém posição original */}
             <Reveal delay={80} className="hidden lg:block">
-              <h2 className="font-hero mt-4 text-3xl leading-tight italic text-foreground/80 sm:text-4xl text-center lg:text-[2.5rem]">
+              <h2 className="font-hero mt-4 text-3xl leading-tight italic text-foreground/80 sm:text-4xl text-center lg:text-[3rem]">
                 "Muito além da estética. Um <span className="text-foreground font-semibold">cuidado especial</span> para a <span className="text-foreground font-semibold">saúde</span> da mulher."
               </h2>
             </Reveal>
