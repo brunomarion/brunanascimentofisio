@@ -16,6 +16,7 @@ import dep2 from "@/assets/dep-2.jpg";
 import dep3 from "@/assets/dep-3.jpg";
 import {
   Baby,
+  ArrowUp,
   Check,
   ClipboardList,
   HandHeart,
@@ -106,6 +107,29 @@ function MobileMenu() {
         </nav>
       </div>
     </div>
+  );
+}
+
+function BackToTop() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > 400);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <a
+      href="#inicio"
+      aria-label="Voltar ao topo"
+      className={`fixed bottom-24 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-primary/25 bg-background text-primary shadow-soft transition-all duration-300 md:hidden ${
+        show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"
+      }`}
+    >
+      <ArrowUp className="h-5 w-5" />
+    </a>
   );
 }
 
@@ -246,13 +270,15 @@ function Index() {
 
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
         <div className="relative mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:flex sm:justify-between">
-          <img
-            src={logoAsset.url}
-            alt="Logo Bruna Nascimento Fisioterapia Especializada"
-            className="h-11 w-auto sm:h-14"
-            width={893}
-            height={243}
-          />
+          <a href="#inicio" aria-label="Voltar ao início" className="inline-flex">
+            <img
+              src={logoAsset.url}
+              alt="Logo Bruna Nascimento Fisioterapia Especializada"
+              className="h-11 w-auto sm:h-14"
+              width={893}
+              height={243}
+            />
+          </a>
           <nav className="hidden shrink-0 items-center gap-x-3 md:flex lg:gap-x-5">
             {menuLinks.map((link) => (
               <a
@@ -312,7 +338,7 @@ function Index() {
                 className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
               />
               <img
-                src={brunaAsset.url}
+                src={sobreAsset.url}
                 alt="Bruna Nascimento, fisioterapeuta dermatofuncional, em sua clínica em João Pessoa"
                 width={1152}
                 height={1379}
@@ -371,7 +397,7 @@ function Index() {
               className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
             />
             <img
-              src={brunaAsset.url}
+              src={sobreAsset.url}
               alt="Bruna Nascimento, fisioterapeuta dermatofuncional, em sua clínica em João Pessoa"
               width={1152}
               height={1379}
@@ -397,7 +423,7 @@ function Index() {
               className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
             />
             <img
-              src={sobreAsset.url}
+              src={brunaAsset.url}
               alt="Bruna Nascimento realizando atendimento de fisioterapia dermatofuncional"
               loading="lazy"
               width={1200}
@@ -689,6 +715,9 @@ function Index() {
       >
         <WhatsAppIcon className="h-7 w-7" />
       </a>
+
+      {/* Voltar ao topo (mobile) */}
+      <BackToTop />
     </div>
   );
 }
