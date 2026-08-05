@@ -327,7 +327,7 @@ function Index() {
                 Fisioterapeuta Dermatofuncional
               </p>
               <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
-                Muito além da estética. Um cuidado completo para a saúde da mulher.
+                "Muito além da estética. Um <strong className="text-primary">cuidado especial<strong/> para a saúde da mulher."
               </h2>
             </Reveal>
 
