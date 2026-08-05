@@ -352,7 +352,7 @@ function Index() {
 
             {/* Frase de destaque premium — mobile abaixo da imagem */}
             <Reveal delay={140} className="lg:hidden">
-              <h2 className="font-hero mt-8 text-3xl leading-tight italic text-muted-foreground sm:text-4xl text-center">
+              <h2 className="font-hero mt-8 text-3xl leading-tight italic text-foreground/80 sm:text-4xl text-center">
                 "Muito além da estética. Um <span className="text-foreground font-semibold">cuidado especial</span> para a <span className="text-foreground font-semibold">saúde</span> da mulher."
               </h2>
             </Reveal>
