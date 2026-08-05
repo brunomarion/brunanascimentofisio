@@ -444,7 +444,7 @@ function Index() {
             <span className="hidden text-xs uppercase tracking-[0.25em] text-primary lg:inline">
               Sobre mim
             </span>
-            <h2 className="mt-4 hidden text-3xl leading-tight sm:text-4xl lg:block text-justify">
+            <h2 className="mt-4 text-2xl leading-tight sm:text-3xl text-start lg:block text-justify">
               "Você merece um atendimento que acolhe, cuida e transforma."
             </h2>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-start">
