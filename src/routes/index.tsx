@@ -314,11 +314,6 @@ function Index() {
         />
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-16 lg:grid-cols-2 lg:py-24">
           <div>
-            <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm">
-              <Sparkles className="h-3 w-4 shrink-0 text-primary" />
-                CREFº 300708 -F
-            </Reveal>
-
             <Reveal delay={80}>
               <h3 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
                 Bruna Nascimento
@@ -327,10 +322,14 @@ function Index() {
                 Fisioterapeuta Dermatofuncional
               </p>
             </Reveal>
+            <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm">
+              <Sparkles className="h-3 w-4 shrink-0 text-primary" />
+                CREFº 300708 -F
+            </Reveal>
 
             {/* Frase de destaque premium — desktop mantém posição original */}
             <Reveal delay={80} className="hidden lg:block">
-              <h2 className="font-hero mt-4 text-3xl leading-tight italic text-foreground/80 sm:text-4xl text-center lg:text-[2.25rem]">
+              <h2 className="font-hero mt-4 text-3xl leading-tight italic text-foreground/80 sm:text-4xl text-center lg:text-[2.5rem]">
                 "Muito além da estética. Um <span className="text-foreground font-semibold">cuidado especial</span> para a <span className="text-foreground font-semibold">saúde</span> da mulher."
               </h2>
             </Reveal>
