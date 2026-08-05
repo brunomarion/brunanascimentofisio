@@ -421,9 +421,9 @@ function Index() {
         {/* Mobile: título aparece antes da imagem (desktop mantém o layout original) */}
         <Reveal className="lg:hidden">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre mim</span>
-          <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
-            "Você merece um atendimento que acolhe, cuida e transforma."
-          </h2>
+          <h2 className="mt-4 text-2xl leading-tight sm:text-3xl text-start lg:block text-justify">
+              "Você merece um atendimento que acolhe, cuida e transforma."
+            </h2>
         </Reveal>
         <div className="mt-10 grid items-center gap-8 md:gap-14 lg:mt-0 lg:grid-cols-2">
           <Reveal className="relative order-1">
@@ -444,9 +444,7 @@ function Index() {
             <span className="hidden text-xs uppercase tracking-[0.25em] text-primary lg:inline">
               Sobre mim
             </span>
-            <h2 className="mt-4 text-2xl leading-tight sm:text-3xl text-start lg:block text-justify">
-              "Você merece um atendimento que acolhe, cuida e transforma."
-            </h2>
+            
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-start">
               <p>
                 Eu sou Bruna Nascimento, <strong>Fisioterapeuta Dermatofuncional</strong> especializada no cuidado com a
