@@ -326,8 +326,8 @@ function Index() {
               <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
                 Fisioterapeuta Dermatofuncional
               </p>
-              <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
-                "Muito além da estética. Um <strong className="text-primary">cuidado especial<strong/> para a saúde da mulher."
+              <h2 className="mt-4 text-3xl leading-tight sm:text-4xl text-center">
+                "Muito além da estética. Um <strong> cuidado especial </strong> para a saúde da mulher."
               </h2>
             </Reveal>
 
