@@ -16,6 +16,7 @@ import dep2 from "@/assets/dep-2.jpg";
 import dep3 from "@/assets/dep-3.jpg";
 import {
   Baby,
+  ArrowUp,
   Check,
   ClipboardList,
   HandHeart,
@@ -106,6 +107,29 @@ function MobileMenu() {
         </nav>
       </div>
     </div>
+  );
+}
+
+function BackToTop() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > 400);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <a
+      href="#inicio"
+      aria-label="Voltar ao topo"
+      className={`fixed bottom-24 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-primary/25 bg-background text-primary shadow-soft transition-all duration-300 md:hidden ${
+        show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"
+      }`}
+    >
+      <ArrowUp className="h-5 w-5" />
+    </a>
   );
 }
 
@@ -691,6 +715,9 @@ function Index() {
       >
         <WhatsAppIcon className="h-7 w-7" />
       </a>
+
+      {/* Voltar ao topo (mobile) */}
+      <BackToTop />
     </div>
   );
 }
