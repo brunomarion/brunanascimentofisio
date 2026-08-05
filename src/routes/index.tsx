@@ -320,8 +320,8 @@ function Index() {
               </h3>
               <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
                 <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm">
-                  <Sparkles className="h-3 w-4 shrink-0 text-primary" />
-                   Fisioterapeuta Dermatofuncional CREFº 300708 -F
+                  <Sparkles className="h-4 w-4 shrink-0 text-primary" />
+                   Fisioterapeuta Dermatofuncional | CREFº300708 -F
                 </Reveal>
               </p>
             </Reveal>
