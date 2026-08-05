@@ -421,9 +421,17 @@ function Index() {
         {/* Mobile: título aparece antes da imagem (desktop mantém o layout original) */}
         <Reveal className="lg:hidden">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre mim</span>
-          <h2 className="mt-4 text-2xl leading-tight sm:text-3xl text-start lg:block text-justify">
-              "Você merece um atendimento que acolhe, cuida e transforma."
-            </h2>
+          <Reveal delay={80}>
+              <h3 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
+                Bruna Nascimento
+              </h3>
+              <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
+                <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
+                  <Sparkles className="h-4 w-4 shrink-0 text-primary "/>
+                   Fisioterapeuta Dermatofuncional | CREFº 300708-F
+                </Reveal>
+              </p>
+            </Reveal>
         </Reveal>
         <div className="mt-10 grid items-center gap-8 md:gap-14 lg:mt-0 lg:grid-cols-2">
           <Reveal className="relative order-1">
@@ -444,7 +452,17 @@ function Index() {
             <span className="hidden text-xs uppercase tracking-[0.25em] text-primary lg:inline">
               Sobre mim
             </span>
-            
+            <Reveal delay={80}>
+              <h3 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
+                Bruna Nascimento
+              </h3>
+              <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
+                <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
+                  <Sparkles className="h-4 w-4 shrink-0 text-primary "/>
+                   Fisioterapeuta Dermatofuncional | CREFº 300708-F
+                </Reveal>
+              </p>
+            </Reveal>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-start">
               <p>
                 Eu sou Bruna Nascimento, <strong>Fisioterapeuta Dermatofuncional</strong> especializada no cuidado com a
