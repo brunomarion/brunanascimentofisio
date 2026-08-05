@@ -424,7 +424,7 @@ function Index() {
             Muito além da estética. Um cuidado completo para a saúde da mulher.
           </h2>
         </Reveal>
-        <div className="mt-10 grid items-center gap-14 lg:mt-0 lg:grid-cols-2">
+        <div className="mt-10 grid items-center gap-8 md:gap-14 lg:mt-0 lg:grid-cols-2">
           <Reveal className="relative order-1">
             <div
               aria-hidden
