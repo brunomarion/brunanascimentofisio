@@ -422,7 +422,7 @@ function Index() {
         <Reveal className="lg:hidden">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre mim</span>
           <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
-            Muito além da estética. Um cuidado completo para a saúde da mulher.
+            "Você merece um atendimento que acolhe, cuida e transforma."
           </h2>
         </Reveal>
         <div className="mt-10 grid items-center gap-8 md:gap-14 lg:mt-0 lg:grid-cols-2">
