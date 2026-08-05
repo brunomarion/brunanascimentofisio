@@ -326,8 +326,16 @@ function Index() {
               <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
                 Fisioterapeuta Dermatofuncional
               </p>
-              <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
-                Especialista no cuidado com a mulher
+              <p className="mt-5 font-display text-2xl leading-snug text-foreground/90 sm:text-3xl">
+                Muito além da estética. Um{" "}
+                <span className="bg-gradient-to-r from-sand to-sand-soft bg-clip-text text-transparent">
+                  cuidado especial
+                </span>{" "}
+                para a{" "}
+                <span className="bg-gradient-to-r from-sand to-sand-soft bg-clip-text text-transparent">
+                  saúde
+                </span>{" "}
+                da mulher.
               </p>
             </Reveal>
 
@@ -416,7 +424,7 @@ function Index() {
             Muito além da estética. Um cuidado completo para a saúde da mulher.
           </h2>
         </Reveal>
-        <div className="mt-10 grid items-center gap-14 lg:mt-0 lg:grid-cols-2">
+        <div className="mt-10 grid items-center gap-8 md:gap-14 lg:mt-0 lg:grid-cols-2">
           <Reveal className="relative order-1">
             <div
               aria-hidden
