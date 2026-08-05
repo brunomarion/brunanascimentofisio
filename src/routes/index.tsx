@@ -320,9 +320,9 @@ function Index() {
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="mt-7 text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
+              <h2 className="mt-7 text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
                 Bruna Nascimento
-              </h1>
+              </h2>
               <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
                 Fisioterapeuta Dermatofuncional
               </p>
