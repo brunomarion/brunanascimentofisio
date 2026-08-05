@@ -330,7 +330,7 @@ function Index() {
 
             {/* Frase de destaque premium — desktop mantém posição original */}
             <Reveal delay={80} className="hidden lg:block">
-              <h2 className="font-hero mt-4 text-3xl leading-tight italic text-muted-foreground sm:text-4xl text-center lg:text-[2.75rem]">
+              <h2 className="font-hero mt-4 text-3xl leading-tight italic text-foreground/80 sm:text-4xl text-center lg:text-[2.25rem]">
                 "Muito além da estética. Um <span className="text-foreground font-semibold">cuidado especial</span> para a <span className="text-foreground font-semibold">saúde</span> da mulher."
               </h2>
             </Reveal>
