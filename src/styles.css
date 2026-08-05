@@ -21,6 +21,7 @@
 @theme inline {
   --font-display: "Playfair Display", serif;
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-hero: "Fraunces", Georgia, serif;
   --color-sand: var(--sand);
   --color-sand-soft: var(--sand-soft);
   --shadow-soft: 0 10px 40px -18px color-mix(in oklab, var(--primary) 40%, transparent);
