@@ -335,7 +335,7 @@ function Index() {
               </h2>
             </Reveal>
 
-            {/* Imagem no mobile: aparece logo após a frase (desktop mantém a imagem na coluna direita) */}
+            {/* Imagem no mobile: aparece logo após o título */}
             <Reveal delay={120} className="relative mt-8 lg:hidden">
               <div
                 aria-hidden
@@ -348,6 +348,13 @@ function Index() {
                 height={1379}
                 className="relative w-full rounded-[2.5rem] object-cover shadow-soft"
               />
+            </Reveal>
+
+            {/* Frase de destaque premium — mobile abaixo da imagem */}
+            <Reveal delay={140} className="lg:hidden">
+              <h2 className="font-hero mt-8 text-3xl leading-tight italic text-muted-foreground sm:text-4xl text-center">
+                "Muito além da estética. Um <span className="text-foreground font-semibold">cuidado especial</span> para a <span className="text-foreground font-semibold">saúde</span> da mulher."
+              </h2>
             </Reveal>
 
 
