@@ -312,7 +312,7 @@ function Index() {
                 className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
               />
               <img
-                src={brunaAsset.url}
+                src={sobreAsset.url}
                 alt="Bruna Nascimento, fisioterapeuta dermatofuncional, em sua clínica em João Pessoa"
                 width={1152}
                 height={1379}
@@ -371,7 +371,7 @@ function Index() {
               className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
             />
             <img
-              src={brunaAsset.url}
+              src={sobreAsset.url}
               alt="Bruna Nascimento, fisioterapeuta dermatofuncional, em sua clínica em João Pessoa"
               width={1152}
               height={1379}
@@ -397,7 +397,7 @@ function Index() {
               className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
             />
             <img
-              src={sobreAsset.url}
+              src={brunaAsset.url}
               alt="Bruna Nascimento realizando atendimento de fisioterapia dermatofuncional"
               loading="lazy"
               width={1200}
