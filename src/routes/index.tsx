@@ -246,13 +246,15 @@ function Index() {
 
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
         <div className="relative mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 sm:flex sm:justify-between">
-          <img
-            src={logoAsset.url}
-            alt="Logo Bruna Nascimento Fisioterapia Especializada"
-            className="h-11 w-auto sm:h-14"
-            width={893}
-            height={243}
-          />
+          <a href="#inicio" aria-label="Voltar ao início" className="inline-flex">
+            <img
+              src={logoAsset.url}
+              alt="Logo Bruna Nascimento Fisioterapia Especializada"
+              className="h-11 w-auto sm:h-14"
+              width={893}
+              height={243}
+            />
+          </a>
           <nav className="hidden shrink-0 items-center gap-x-3 md:flex lg:gap-x-5">
             {menuLinks.map((link) => (
               <a
