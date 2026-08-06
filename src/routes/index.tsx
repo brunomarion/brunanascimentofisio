@@ -45,7 +45,6 @@ const menuLinks = [
   { label: "Especialidades", href: "#especialidades" },
   { label: "Benefícios", href: "#beneficios" },
   { label: "Consultas", href: "#como-funciona" },
-  { label: "Diferenciais", href: "#diferenciais" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
@@ -210,18 +209,6 @@ const etapas = [
   {
     title: "Acompanhamento da Evolução",
     text: "Reavaliações contínuas para ajustar o tratamento e garantir resultados seguros.",
-  },
-];
-
-const diferenciais = [
-  { icon: HandHeart, title: "Atendimento Individualizado" },
-  { icon: Sparkles, title: "Técnicas Atualizadas" },
-  { icon: ClipboardList, title: "Protocolos Personalizados" },
-  { icon: HeartPulse, title: "Atendimento Humanizado" },
-  {
-    icon: Ribbon,
-    title: "Taping Terapêutico",
-    text: "Recurso complementar para potencializar os resultados dos tratamentos.",
   },
 ];
 
