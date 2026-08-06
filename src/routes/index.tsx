@@ -445,7 +445,7 @@ function Index() {
       </section>
 
       {/* SOBRE */}
-      <section id="sobre" className="mx-auto max-w-6xl px-5 pt-10 pb-20 lg:py-28">
+      <section id="sobre" className="mx-auto max-w-6xl px-5 pt-15 pb-20 lg:py-28">
         {/* Mobile: título aparece antes da imagem (desktop mantém o layout original) */}
         <Reveal className="lg:hidden">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre mim</span>
