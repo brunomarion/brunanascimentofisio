@@ -24,6 +24,8 @@
   --font-hero: "Fraunces", Georgia, serif;
   --color-sand: var(--sand);
   --color-sand-soft: var(--sand-soft);
+  --color-brand-rose: var(--brand-rose);
+
   --shadow-soft: 0 10px 40px -18px color-mix(in oklab, var(--primary) 40%, transparent);
   --shadow-card: 0 2px 20px -10px color-mix(in oklab, var(--primary) 28%, transparent);
 
