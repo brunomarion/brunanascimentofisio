@@ -494,7 +494,7 @@ function Index() {
             </Reveal>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-start">
               <p>
-                Eu sou Bruna Nascimento, <strong>Fisioterapeuta Dermatofuncional</strong> especializada no cuidado com a
+                Eu sou Bruna Nascimento, <strong>Fisioterapeuta Dermatofuncional </strong> | CREFº 300708-F especializada no cuidado com a
                 mulher, oferecendo tratamentos personalizados para promover <strong>saúde, recuperação,
                 bem-estar e autoestima.</strong>
               </p>
