@@ -499,11 +499,10 @@ function Index() {
                 bem-estar e autoestima.</strong>
               </p>
               <p>
-                Meu atendimento é pautado em uma abordagem humanizada, utilizando protocolos especializados para 
-                acelerar a recuperação, reduzir dores, controlar edemas, prevenir e tratar fibroses, estimular a cicatrização 
-                e proporcionar resultados seguros e duradouros. Alinhando conhecimento
-                científico, <strong>técnicas modernas e acompanhamento individualizado</strong> para garantir
-                resultados seguros e eficientes.
+                Com um atendimento pautado em uma abordagem humanizada, eu utilizo protocolos especializados para 
+                <strong> acelerar a recuperação, reduzir dores, controlar edemas, prevenir e tratar fibroses, estimular a cicatrização 
+                e proporcionar resultados seguros e duradouros.</strong> Alinhando conhecimento,<strong> técnicas modernas e acompanhamento 
+                individualizado</strong> para garantir resultados seguros e eficientes.
               </p>
               <p>
                 Cada paciente recebe um plano de tratamento exclusivo, <strong>respeitando suas
