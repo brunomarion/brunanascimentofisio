@@ -314,27 +314,23 @@ function Index() {
         />
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-16 lg:grid-cols-2 lg:py-24">
           <div>
-            <Reveal delay={80}>
-              <h3 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
-                Bruna Nascimento
-              </h3>
-              <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
-                <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
-                  <Sparkles className="h-4 w-4 shrink-0 text-primary "/>
-                   Fisioterapeuta Dermatofuncional | CREFº 300708-F
-                </Reveal>
-              </p>
-            </Reveal>
-
-            {/* Frase de destaque premium — desktop mantém posição original */}
-            <Reveal delay={80} className="hidden lg:block">
-              <h2 className="font-hero mt-4 text-3xl leading-tight italic text-foreground/80 sm:text-4xl text-center lg:text-[3rem]">
-                "Muito além da estética. Um <span className="text-foreground font-semibold">cuidado especial</span> para a <span className="text-foreground font-semibold">saúde</span> da mulher."
-              </h2>
+            {/* Título principal com marca d'água da logo */}
+            <Reveal delay={80} className="relative">
+              <img
+                src={logoAsset.url}
+                alt=""
+                aria-hidden
+                className="pointer-events-none absolute left-1/2 top-1/2 w-[115%] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[0.07] select-none"
+              />
+              <h1 className="relative font-display text-[2.25rem] leading-[1.14] tracking-tight sm:text-5xl lg:text-[3.75rem] lg:leading-[1.1]">
+                <span className="block text-primary">Cuidado que transforma</span>
+                <span className="block text-secondary-foreground">sua saúde e</span>
+                <span className="block text-secondary-foreground">sua autoestima.</span>
+              </h1>
             </Reveal>
 
             {/* Imagem no mobile: aparece logo após o título */}
-            <Reveal delay={120} className="relative mt-8 lg:hidden">
+            <Reveal delay={120} className="relative mt-10 lg:hidden">
               <div
                 aria-hidden
                 className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
@@ -348,12 +344,6 @@ function Index() {
               />
             </Reveal>
 
-            {/* Frase de destaque premium — mobile abaixo da imagem */}
-            <Reveal delay={140} className="lg:hidden">
-              <h2 className="font-hero mt-8 text-3xl leading-tight italic text-foreground/80 sm:text-4xl text-center">
-                "Muito além da estética. Um <span className="text-foreground font-semibold">cuidado especial</span> para a <span className="text-foreground font-semibold">saúde</span> da mulher."
-              </h2>
-            </Reveal>
 
 
             <Reveal delay={160}>
