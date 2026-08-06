@@ -475,7 +475,8 @@ function Index() {
             <span className="hidden text-xs uppercase tracking-[0.25em] text-primary lg:inline">
               Sobre mim
             </span>
-            <Reveal delay={80}>
+            <Reveal delay={80} className="hidden lg:block">
+
               <h3 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
                 Bruna Nascimento
               </h3>
