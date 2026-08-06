@@ -10,6 +10,7 @@ import { Reveal } from "@/components/Reveal";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import brunaAsset from "@/assets/bruna-perfil.png.asset.json";
 import logoAsset from "@/assets/logo-bn.png.asset.json";
+import monogramAsset from "@/assets/bn-monograma.png.asset.json";
 import sobreAsset from "@/assets/sobre-atendimento.png.asset.json";
 import dep1 from "@/assets/dep-1.jpg";
 import dep2 from "@/assets/dep-2.jpg";
