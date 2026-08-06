@@ -10,6 +10,7 @@ import { Reveal } from "@/components/Reveal";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import brunaAsset from "@/assets/bruna-perfil.png.asset.json";
 import logoAsset from "@/assets/logo-bn.png.asset.json";
+import monogramAsset from "@/assets/bn-monograma.png.asset.json";
 import sobreAsset from "@/assets/sobre-atendimento.png.asset.json";
 import dep1 from "@/assets/dep-1.jpg";
 import dep2 from "@/assets/dep-2.jpg";
@@ -303,7 +304,7 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section id="inicio" className="relative overflow-hidden">
+      <section id="inicio" className="gradient-soft relative overflow-hidden">
         <div
           aria-hidden
           className="gradient-brand pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full opacity-25 blur-3xl"
@@ -312,22 +313,53 @@ function Index() {
           aria-hidden
           className="pointer-events-none absolute -left-32 top-1/2 h-96 w-96 rounded-full bg-secondary opacity-40 blur-3xl"
         />
+        {/* Curvas orgânicas decorativas */}
+        <svg
+          aria-hidden
+          viewBox="0 0 1440 720"
+          preserveAspectRatio="none"
+          className="pointer-events-none absolute inset-0 h-full w-full text-primary/25"
+        >
+          <path
+            d="M-40 560C220 470 360 640 620 520S980 300 1180 380s240 40 320 10"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+          />
+          <path
+            d="M-40 640C260 560 380 700 660 600s360-180 560-110 220 60 300 30"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            opacity="0.6"
+          />
+          <path
+            d="M-20 120C240 60 420 220 700 140s420-160 620-90"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            opacity="0.45"
+          />
+        </svg>
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-16 lg:grid-cols-2 lg:py-24">
           <div>
-            {/* Título principal com marca d'água da logo */}
+            {/* Título principal com monograma BN como marca d'água */}
             <Reveal delay={80} className="relative">
               <img
-                src={logoAsset.url}
+                src={monogramAsset.url}
                 alt=""
                 aria-hidden
-                className="pointer-events-none absolute left-1/2 top-1/2 w-[115%] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[0.07] select-none"
+                width={189}
+                height={221}
+                className="pointer-events-none absolute -right-4 top-1/2 h-auto w-[9rem] max-w-none -translate-y-1/2 select-none opacity-[0.13] sm:w-[12rem] lg:-right-10 lg:w-[15rem]"
               />
-              <h1 className="relative font-display text-[2.25rem] leading-[1.14] tracking-tight sm:text-5xl lg:text-[3.75rem] lg:leading-[1.1]">
+              <h1 className="relative font-display text-[2.5rem] leading-[1.16] tracking-[-0.015em] sm:text-[3.25rem] lg:text-[4rem] lg:leading-[1.12]">
                 <span className="block text-primary">Cuidado que transforma</span>
                 <span className="block text-secondary-foreground">sua saúde e</span>
                 <span className="block text-secondary-foreground">sua autoestima.</span>
               </h1>
             </Reveal>
+
 
             {/* Imagem no mobile: aparece logo após o título */}
             <Reveal delay={120} className="relative mt-10 lg:hidden">
