@@ -494,12 +494,14 @@ function Index() {
             </Reveal>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-start">
               <p>
-                Eu sou Bruna Nascimento, <strong>Fisioterapeuta Dermatofuncional </strong> | CREFº 300708-F especializada no cuidado com a
+                Eu sou Bruna Nascimento, <strong>Fisioterapeuta Dermatofuncional </strong>, especializada no cuidado com a
                 mulher, oferecendo tratamentos personalizados para promover <strong>saúde, recuperação,
                 bem-estar e autoestima.</strong>
               </p>
               <p>
-                Meu atendimento é pautado em uma abordagem humanizada, aliando conhecimento
+                Meu atendimento é pautado em uma abordagem humanizada, utilizando protocolos especializados para 
+                acelerar a recuperação, reduzir dores, controlar edemas, prevenir e tratar fibroses, estimular a cicatrização 
+                e proporcionar resultados seguros e duradouros. Alinhando conhecimento
                 científico, <strong>técnicas modernas e acompanhamento individualizado</strong> para garantir
                 resultados seguros e eficientes.
               </p>
