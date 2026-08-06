@@ -501,12 +501,12 @@ function Index() {
               <p>
                 Com um atendimento pautado em uma abordagem humanizada, eu utilizo protocolos especializados para 
                 <strong> acelerar a recuperação, reduzir dores, controlar edemas, prevenir e tratar fibroses, estimular a cicatrização 
-                e proporcionar resultados seguros e duradouros.</strong> Alinhando conhecimento,<strong> técnicas modernas e acompanhamento 
-                individualizado</strong> para garantir resultados seguros e eficientes.
+                e proporcionar resultados seguros e duradouros.</strong>
               </p>
               <p>
-                Cada paciente recebe um plano de tratamento exclusivo, <strong>respeitando suas
-                necessidades, objetivos e adaptado</strong> para cada fase de recuperação.
+                Alinhando meu conhecimento,<strong> com técnicas modernas e acompanhamento 
+                individualizado</strong> para garantir resultados seguros e eficientes, respeitando suas
+                necessidades e objetivos para cada fase de recuperação com um plano de tratamento exclusivo.
               </p>
             </div>
           </Reveal>
