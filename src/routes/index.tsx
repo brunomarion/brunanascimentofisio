@@ -359,6 +359,11 @@ function Index() {
                 <span className="block text-secondary-foreground">sua autoestima.</span>
               </h1>
 
+              <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
+                  <Sparkles className="h-4 w-4 shrink-0 text-primary "/>
+                   Fisioterapeuta Dermatofuncional | CREFº 300708-F
+                </Reveal>
+
             </Reveal>
 
 
