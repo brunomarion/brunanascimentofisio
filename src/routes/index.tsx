@@ -504,8 +504,8 @@ function Index() {
                 e proporcionar resultados seguros e duradouros.</strong>
               </p>
               <p>
-                Alinhando meu conhecimento,<strong> com técnicas modernas e acompanhamento 
-                individualizado</strong> para garantir resultados seguros e eficientes, respeitando suas
+                Alinhando meu conhecimento,<strong> com técnicas modernas e um acompanhamento 
+                individualizado</strong>, garanto resultados seguros e eficientes, respeitando suas
                 necessidades e objetivos para cada fase de recuperação com um plano de tratamento exclusivo.
               </p>
             </div>
