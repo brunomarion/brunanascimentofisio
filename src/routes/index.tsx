@@ -341,7 +341,7 @@ function Index() {
             opacity="0.45"
           />
         </svg>
-        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 py-16 lg:grid-cols-2 lg:py-24">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-16 pt-6 lg:grid-cols-2 lg:py-24">
           <div>
             {/* Título principal com monograma BN como marca d'água */}
             <Reveal delay={80} className="relative">
@@ -353,11 +353,12 @@ function Index() {
                 height={221}
                 className="pointer-events-none absolute -right-4 top-1/2 h-auto w-[9rem] max-w-none -translate-y-1/2 select-none opacity-[0.13] sm:w-[12rem] lg:-right-10 lg:w-[15rem]"
               />
-              <h1 className="relative font-display text-[2.5rem] leading-[1.16] tracking-[-0.015em] sm:text-[3.25rem] lg:text-[4rem] lg:leading-[1.12]">
-                <span className="block text-primary">Cuidado que transforma</span>
+              <h1 className="relative font-hero text-[2.5rem] font-semibold leading-[1.16] tracking-[-0.015em] sm:text-[3.25rem] lg:text-[4rem] lg:leading-[1.12]">
+                <span className="block text-brand-rose">Cuidado que transforma</span>
                 <span className="block text-secondary-foreground">sua saúde e</span>
                 <span className="block text-secondary-foreground">sua autoestima.</span>
               </h1>
+
             </Reveal>
 
 
