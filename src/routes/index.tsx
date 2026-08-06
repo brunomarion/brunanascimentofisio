@@ -580,29 +580,6 @@ function Index() {
         </ol>
       </section>
 
-      {/* DIFERENCIAIS */}
-      <section id="diferenciais" className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="text-xs uppercase tracking-[0.25em] text-primary">Diferenciais</span>
-          <h2 className="mt-4 text-3xl sm:text-4xl">Cuidado de alto padrão em cada detalhe</h2>
-        </Reveal>
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {diferenciais.map((item, i) => (
-            <Reveal
-              key={item.title}
-              delay={i * 70}
-              className="rounded-3xl border border-border/70 bg-card p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-card"
-            >
-              <item.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
-              <h3 className="mt-5 text-base">{item.title}</h3>
-              {item.text ? (
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-              ) : null}
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
       {/* DEPOIMENTOS */}
       <section id="depoimentos" className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
         <Reveal className="mx-auto max-w-2xl text-center">
