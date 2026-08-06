@@ -74,7 +74,9 @@
 :root {
   --radius: 1rem;
   --sand: oklch(0.709 0.049 66.5); /* #bc9b7f */
+  --sand-soft: oklch(0.913 0.032 79.5); /* #efddcb */
   --brand-rose: oklch(0.833 0.08 17.9); /* #f8b4b5 - rosa da logo */
+
 
   --background: oklch(1 0 0);
   --foreground: oklch(0.29 0.014 60);
