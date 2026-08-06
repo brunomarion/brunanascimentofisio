@@ -341,7 +341,7 @@ function Index() {
             opacity="0.45"
           />
         </svg>
-        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-16 pt-6 lg:grid-cols-2 lg:py-24">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-16 pt-9 lg:grid-cols-2 lg:py-24">
           <div>
             {/* Título principal com monograma BN como marca d'água */}
             <Reveal delay={80} className="relative">
