@@ -342,8 +342,8 @@ function Index() {
               />
               <h1 className="relative font-hero text-[2.5rem] font-bold leading-[1.16] tracking-[-0.015em] sm:text-[3.25rem] lg:text-[4rem] lg:leading-[1.12]">
                 <span className="block text-[#e89a9b]">Cuidado que transforma</span>
-                <span className="block text-secondary-foreground">sua saúde e</span>
-                <span className="block text-secondary-foreground">sua autoestima</span>
+                <span className="block text-[#9a7b5c]">sua saúde e</span>
+                <span className="block text-[#9a7b5c]">sua autoestima</span>
               </h1>
 
               <Reveal className="mt-6 sm:mt-8 lg:mt-10 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
@@ -442,12 +442,12 @@ function Index() {
               <h3 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
                 Bruna Nascimento
               </h3>
-              <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
+              <div className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
                 <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
                   <Sparkles className="h-4 w-4 shrink-0 text-primary "/>
                    CREFITOº 300708-F
                 </Reveal>
-              </p>
+              </div>
             </Reveal>
         </Reveal>
         <div className="mt-10 grid items-center gap-8 md:gap-14 lg:mt-0 lg:grid-cols-2">
@@ -475,12 +475,12 @@ function Index() {
               <h3 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
                 Bruna Nascimento
               </h3>
-              <p className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
+              <div className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
                 <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
                   <Sparkles className="h-4 w-4 shrink-0 text-primary "/>
                    CREFITOº 300708-F
                 </Reveal>
-              </p>
+              </div>
             </Reveal>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-start">
               <p>
