@@ -36,7 +36,7 @@ import {
 } from "lucide-react";
 
 const WHATSAPP =
-  "https://wa.me/5583999072800?text=Ol%C3%A1%2C%20Bruna!%20%F0%9F%98%8A%20Encontrei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos%3F";
+  "https://wa.me/5583999072800?text=Ol%C3%A1%2C%20Bruna!%20%F0%9F%98%8A%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos%3F";
 const INSTAGRAM = "https://www.instagram.com/brunanascimento_fisio";
 
 const menuLinks = [
@@ -341,7 +341,7 @@ function Index() {
                 className="pointer-events-none absolute -right-4 top-1/2 h-auto w-[9rem] max-w-none -translate-y-1/2 select-none opacity-[0.13] sm:w-[12rem] lg:-right-10 lg:w-[15rem]"
               />
               <h1 className="relative font-hero text-[2.5rem] font-bold leading-[1.16] tracking-[-0.015em] sm:text-[3.25rem] lg:text-[4rem] lg:leading-[1.12]">
-                <span className="block text-brand-rose">Cuidado que transforma</span>
+                <span className="block text-[#e89a9b]">Cuidado que transforma</span>
                 <span className="block text-secondary-foreground">sua saúde e</span>
                 <span className="block text-secondary-foreground">sua autoestima</span>
               </h1>
