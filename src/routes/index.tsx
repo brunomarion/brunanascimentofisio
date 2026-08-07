@@ -342,8 +342,8 @@ function Index() {
               />
               <h1 className="relative font-hero text-[2.5rem] font-bold leading-[1.16] tracking-[-0.015em] sm:text-[3.25rem] lg:text-[4rem] lg:leading-[1.12]">
                 <span className="block text-[#e89a9b]">Cuidado que transforma</span>
-                <span className="block text-[#CDB49E]">sua saúde e</span>
-                <span className="block text-[#CDB49E]">sua autoestima</span>
+                <span className="block text-[#9b8168]">sua saúde e</span>
+                <span className="block text-[#9b8168]">sua autoestima</span>
               </h1>
 
               <Reveal className="mt-6 sm:mt-8 lg:mt-10 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
