@@ -594,9 +594,10 @@ function Index() {
                   src={d.photo}
                   alt={`Paciente ${d.name}`}
                   loading="lazy"
+                  decoding="async"
                   width={512}
                   height={512}
-                  className="h-11 w-11 rounded-full object-cover"
+                  className="img-premium h-11 w-11 rounded-full object-cover"
                 />
                 <span className="text-sm font-medium">{d.name}</span>
               </div>
