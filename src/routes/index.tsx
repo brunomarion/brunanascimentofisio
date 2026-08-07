@@ -363,9 +363,10 @@ function Index() {
               <img
                 src={sobreAsset.url}
                 alt="Bruna Nascimento, fisioterapeuta dermatofuncional, em sua clínica em João Pessoa"
+              decoding="async"
                 width={1152}
                 height={1379}
-                className="relative w-full rounded-[2.5rem] object-cover shadow-soft"
+                className="img-premium relative w-full rounded-[2.5rem] object-cover shadow-soft"
               />
             </Reveal>
 
@@ -423,9 +424,10 @@ function Index() {
             <img
               src={sobreAsset.url}
               alt="Bruna Nascimento, fisioterapeuta dermatofuncional, em sua clínica em João Pessoa"
+              decoding="async"
               width={1152}
               height={1379}
-              className="relative w-full rounded-[2.5rem] object-cover shadow-soft"
+              className="img-premium relative w-full rounded-[2.5rem] object-cover shadow-soft"
             />
           </Reveal>
         </div>
@@ -457,10 +459,11 @@ function Index() {
             <img
               src={brunaAsset.url}
               alt="Bruna Nascimento realizando atendimento de fisioterapia dermatofuncional"
+              decoding="async"
               loading="lazy"
               width={1200}
               height={1400}
-              className="relative w-full rounded-[2.5rem] object-cover shadow-soft"
+              className="img-premium relative w-full rounded-[2.5rem] object-cover shadow-soft"
             />
           </Reveal>
           <Reveal delay={100} className="order-2">
