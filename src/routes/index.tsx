@@ -335,7 +335,7 @@ function Index() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-16 pt-9 lg:grid-cols-2 lg:py-24">
           <div>
             {/* Título principal com monograma BN como marca d'água */}
-            <Reveal delay={980} className="relative">
+            <Reveal delay={490} className="relative">
               <img
                 src={monogramAsset.url}
                 alt=""
@@ -359,7 +359,7 @@ function Index() {
 
 
             {/* Imagem no mobile: aparece logo após o título */}
-            <Reveal delay={1200} className="relative mt-10 lg:hidden">
+            <Reveal delay={660} className="reveal-photo relative mt-10 lg:hidden">
               <div
                 aria-hidden
                 className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
@@ -376,14 +376,14 @@ function Index() {
 
 
 
-            <Reveal delay={1060}>
+            <Reveal delay={530}>
               <p className="mt-6 max-w-xl text-balance-pretty text-base leading-relaxed text-muted-foreground">
                 Recupere sua autoestima, acelere sua recuperação e cuide do seu corpo com um
                 atendimento humanizado, individualizado e baseado em evidências.
               </p>
             </Reveal>
 
-            <Reveal delay={1120} as="div">
+            <Reveal delay={560} as="div">
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {[
                   "Pós Parto",
@@ -402,7 +402,7 @@ function Index() {
               </ul>
             </Reveal>
 
-            <Reveal delay={1180} as="div">
+            <Reveal delay={590} as="div">
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={WHATSAPP}
@@ -421,7 +421,7 @@ function Index() {
             </Reveal>
           </div>
 
-          <Reveal delay={1200} className="relative hidden lg:block">
+          <Reveal delay={660} className="reveal-photo relative hidden lg:block">
             <div
               aria-hidden
               className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
@@ -684,7 +684,7 @@ function Index() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 transition-colors hover:text-primary"
             >
-              <MessageCircle className="h-4 w-4 shrink-0 text-primary" />
+              <WhatsAppIcon className="h-4 w-4 shrink-0 text-primary" />
               WhatsApp: (83) 99907-2800
             </a>
             <a
@@ -693,7 +693,7 @@ function Index() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 transition-colors hover:text-primary"
             >
-              <Instagram className="h-4 w-4 shrink-0 text-primary" />
+              <Instagram className="h-5 w-5 shrink-0 text-primary md:h-4 md:w-4" />
               @brunanascimento_fisio
             </a>
           </div>
@@ -714,7 +714,7 @@ function Index() {
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/25 text-primary transition-colors hover:bg-secondary"
               >
-                <Instagram className="h-4 w-4" />
+                <Instagram className="h-5 w-5 md:h-4 md:w-4" />
               </a>
               <a
                 href={WHATSAPP}
@@ -723,7 +723,7 @@ function Index() {
                 aria-label="WhatsApp"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/25 text-primary transition-colors hover:bg-secondary"
               >
-                <MessageCircle className="h-4 w-4" />
+                <WhatsAppIcon className="h-4 w-4" />
               </a>
             </div>
           </div>
