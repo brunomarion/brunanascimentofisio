@@ -26,6 +26,7 @@ import {
   MapPin,
   Menu,
   MessageCircle,
+  Phone,
   Ribbon,
   ScanHeart,
   Sparkles,
@@ -133,8 +134,7 @@ function BackToTop() {
   );
 }
 
-const TITLE =
-  "Bruna Nascimento | Fisioterapeuta Dermatofuncional em João Pessoa | Pós-Parto, Pré e Pós Operatório, Laserterapia, Taping Terapêutico e Tratamento de Estrias";
+const TITLE = "Bruna Nascimento | Fisioterapeuta Dermatofuncional";
 const DESCRIPTION =
   "Bruna Nascimento é Fisioterapeuta Dermatofuncional em João Pessoa, especializada no cuidado com a mulher. Atendimento humanizado em pós-parto, pré e pós-operatório, laserterapia, taping terapêutico e tratamento de estrias. Agende sua avaliação.";
 
@@ -675,7 +675,7 @@ function Index() {
           </div>
           <div className="space-y-3 text-sm text-muted-foreground">
             <p className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 shrink-0 text-primary" />
+              <MapPin className="h-5 w-5 shrink-0 text-primary md:h-4 md:w-4" />
               João Pessoa - PB
             </p>
             <a
@@ -684,8 +684,8 @@ function Index() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 transition-colors hover:text-primary"
             >
-              <WhatsAppIcon className="h-4 w-4 shrink-0 text-primary" />
-              WhatsApp: (83) 99907-2800
+              <Phone className="h-5 w-5 shrink-0 text-primary md:h-4 md:w-4" />
+              Telefone: (83) 99907-2800
             </a>
             <a
               href={INSTAGRAM}
@@ -715,15 +715,6 @@ function Index() {
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/25 text-primary transition-colors hover:bg-secondary"
               >
                 <Instagram className="h-5 w-5 md:h-4 md:w-4" />
-              </a>
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/25 text-primary transition-colors hover:bg-secondary"
-              >
-                <WhatsAppIcon className="h-4 w-4" />
               </a>
             </div>
           </div>
