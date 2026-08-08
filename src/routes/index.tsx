@@ -247,6 +247,10 @@ const faq = [
     q: "Como funciona a avaliação inicial?",
     a: "É um encontro tranquilo e sem pressa: escuto sua história, avalio seu corpo, esclareço dúvidas e apresento o plano de tratamento mais indicado para a sua fase, com objetivos claros.",
   },
+  {
+    q: "Quais dias da semana consigo marcar uma consulta com a Bruna?",
+    a: "Atendo todos os dias da semana. Fale comigo e agende o seu melhor horário.",
+  },
 ];
 
 function Index() {
