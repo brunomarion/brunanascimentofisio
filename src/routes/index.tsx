@@ -335,7 +335,7 @@ function Index() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-16 pt-9 lg:grid-cols-2 lg:py-24">
           <div>
             {/* Título principal com monograma BN como marca d'água */}
-            <Reveal delay={80} className="relative">
+            <Reveal delay={980} className="relative">
               <img
                 src={monogramAsset.url}
                 alt=""
@@ -359,7 +359,7 @@ function Index() {
 
 
             {/* Imagem no mobile: aparece logo após o título */}
-            <Reveal delay={120} className="relative mt-10 lg:hidden">
+            <Reveal delay={1200} className="relative mt-10 lg:hidden">
               <div
                 aria-hidden
                 className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
@@ -376,14 +376,14 @@ function Index() {
 
 
 
-            <Reveal delay={160}>
+            <Reveal delay={1060}>
               <p className="mt-6 max-w-xl text-balance-pretty text-base leading-relaxed text-muted-foreground">
                 Recupere sua autoestima, acelere sua recuperação e cuide do seu corpo com um
                 atendimento humanizado, individualizado e baseado em evidências.
               </p>
             </Reveal>
 
-            <Reveal delay={220} as="div">
+            <Reveal delay={1120} as="div">
               <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                 {[
                   "Pós Parto",
@@ -402,14 +402,15 @@ function Index() {
               </ul>
             </Reveal>
 
-            <Reveal delay={280} as="div">
+            <Reveal delay={1180} as="div">
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90"
+                  className="inline-flex items-center justify-center gap-2.5 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90"
                 >
+                  <WhatsAppIcon className="h-[1.15em] w-[1.15em] shrink-0" />
                   Agendar Avaliação
                 </a>
               </div>
@@ -420,7 +421,7 @@ function Index() {
             </Reveal>
           </div>
 
-          <Reveal delay={120} className="relative hidden lg:block">
+          <Reveal delay={1200} className="relative hidden lg:block">
             <div
               aria-hidden
               className="gradient-brand absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
