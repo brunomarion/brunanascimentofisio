@@ -196,7 +196,7 @@ const beneficios = [
 const etapas = [
   {
     title: "Agendamento",
-    text: "Você fala diretamente pelo WhatsApp e escolhe o melhor horário para o seu momento.",
+    text: "Você fala diretamente comigo pelo WhatsApp e escolhe o melhor horário para o seu momento.",
   },
   {
     title: "Avaliação Completa",
@@ -204,11 +204,11 @@ const etapas = [
   },
   {
     title: "Plano Personalizado",
-    text: "Protocolo exclusivo com as técnicas mais indicadas para a sua fase de recuperação.",
+    text: "Protocolo exclusivo com as técnicas mais indicadas e atualizadas para a sua fase de recuperação.",
   },
   {
     title: "Acompanhamento da Evolução",
-    text: "Reavaliações contínuas para ajustar o tratamento e garantir resultados seguros.",
+    text: "Reavaliações contínuas para ajustar o tratamento e garantir resultados ainda mais seguros.",
   },
 ];
 
@@ -248,8 +248,8 @@ const faq = [
     a: "É um encontro tranquilo e sem pressa: escuto sua história, avalio seu corpo, esclareço dúvidas e apresento o plano de tratamento mais indicado para a sua fase, com objetivos claros.",
   },
   {
-    q: "Quais dias da semana consigo marcar uma consulta com a Bruna?",
-    a: "Atendo todos os dias da semana. Fale comigo e agende o seu melhor horário.",
+    q: "Quais dias da semana consigo marcar uma consulta?",
+    a: "Atendo todos os dias da semana, pode ficar tranquila. Fale comigo no WhatsApp agora mesmo e agende um melhor horário pra você.",
   },
 ];
 
