@@ -216,17 +216,17 @@ const depoimentos = [
   {
     name: "Ingrid",
     photo: dep1,
-    text: "Fiz o pós-operatório com a Bruna e me senti cuidada do início ao fim. O inchaço reduziu rápido e ela explicava cada etapa com muita paciência.",
+    text: "Fiz o pós-operatório com a Bruna e me senti cuidada do início ao fim. O inchaço reduziu rápido e ela explicava cada etapa com todos os detalhes e muita paciência. Ela é incrível!",
   },
   {
     name: "Camila",
     photo: dep2,
-    text: "No pós-parto eu estava insegura com meu corpo. O acompanhamento foi humano, leve e devolveu minha confiança em poucas semanas.",
+    text: "No pós-parto eu estava bem insegura com meu corpo. O acompanhamento foi humano, leve e devolveu totalmente minha confiança em poucas semanas. Maravilhosa.",
   },
   {
     name: "Juliana",
     photo: dep3,
-    text: "Tratei estrias antigas sem grandes expectativas e me surpreendi. Protocolo personalizado, ambiente acolhedor e resultado visível.",
+    text: "Tratei estrias antigas sem grandes expectativas e me surpreendi. Protocolo personalizado pra mim e um resultado visível. Recomento demais a Bruna.",
   },
 ];
 
