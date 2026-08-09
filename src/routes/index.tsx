@@ -595,6 +595,7 @@ function Index() {
                 “{d.text}”
               </blockquote>
               <div className="mt-6 flex items-center gap-3">
+                <Instagram className="h-5 w-5 shrink-0 text-primary md:h-4 md:w-4" />
                 <span className="text-sm font-medium">{d.name}</span>
               </div>
             </Reveal>
