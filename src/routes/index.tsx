@@ -214,17 +214,17 @@ const etapas = [
 
 const depoimentos = [
   {
-    name: "Marina L.",
+    name: "Ingrid",
     photo: dep1,
     text: "Fiz o pós-operatório com a Bruna e me senti cuidada do início ao fim. O inchaço reduziu rápido e ela explicava cada etapa com muita paciência.",
   },
   {
-    name: "Camila R.",
+    name: "Camila",
     photo: dep2,
     text: "No pós-parto eu estava insegura com meu corpo. O acompanhamento foi humano, leve e devolveu minha confiança em poucas semanas.",
   },
   {
-    name: "Juliana S.",
+    name: "Juliana",
     photo: dep3,
     text: "Tratei estrias antigas sem grandes expectativas e me surpreendi. Protocolo personalizado, ambiente acolhedor e resultado visível.",
   },
@@ -595,15 +595,6 @@ function Index() {
                 “{d.text}”
               </blockquote>
               <div className="mt-6 flex items-center gap-3">
-                <img
-                  src={d.photo}
-                  alt={`Paciente ${d.name}`}
-                  loading="lazy"
-                  decoding="async"
-                  width={512}
-                  height={512}
-                  className="img-premium h-11 w-11 rounded-full object-cover"
-                />
                 <span className="text-sm font-medium">{d.name}</span>
               </div>
             </Reveal>
