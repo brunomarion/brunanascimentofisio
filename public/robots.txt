@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://brunanascimentofisio.vercel.app/sitemap.xml
+Sitemap: https://brunanascimento.fisio.vercel.app/sitemap.xml
