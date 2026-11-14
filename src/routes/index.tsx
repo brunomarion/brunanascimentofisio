@@ -148,7 +148,7 @@ function BackToTop() {
   );
 }
 
-const SITE_URL = "https://brunanascimentofisio.vercel.app";
+const SITE_URL = "https://brunanascimento.fisio.vercel.app";
 const OG_IMAGE = logoAsset.url;
 const TITLE = "Fisioterapia Dermatofuncional em João Pessoa | Bruna Nascimento";
 const DESCRIPTION =
