@@ -9,10 +9,6 @@ import {
 } from "@/components/ui/accordion";
 import { Reveal } from "@/components/Reveal";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
-import brunaAsset from "@/assets/bruna-perfil.png.asset.json";
-import logoAsset from "@/assets/logo-bn.png.asset.json";
-import monogramAsset from "@/assets/bn-monograma.png.asset.json";
-import sobreAsset from "@/assets/sobre-atendimento.png.asset.json";
 import dep1 from "@/assets/dep-1.jpg";
 import dep2 from "@/assets/dep-2.jpg";
 import dep3 from "@/assets/dep-3.jpg";
@@ -42,6 +38,20 @@ import {
 const WHATSAPP =
   "https://wa.me/5583999072800?text=Ol%C3%A1%2C%20Bruna!%20%F0%9F%98%8A%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos%3F";
 const INSTAGRAM = "https://www.instagram.com/brunanascimento_fisio";
+
+const LOVABLE_ASSET_BASE = "https://brunanascimentofisio.lovable.app/__l5e/assets-v1";
+const brunaAsset = {
+  url: `${LOVABLE_ASSET_BASE}/68bf1443-a830-44ae-a3c7-7c6b98718493/bruna-perfil.png`,
+};
+const logoAsset = {
+  url: `${LOVABLE_ASSET_BASE}/45c0c2d5-b182-474f-996e-a1dc093f5cf5/logo-bn.png`,
+};
+const monogramAsset = {
+  url: `${LOVABLE_ASSET_BASE}/15a2c319-276e-44d0-b6e5-b2bdb871a3be/bn-monograma.png`,
+};
+const sobreAsset = {
+  url: `${LOVABLE_ASSET_BASE}/dff47f77-195d-480e-a066-0a762247c8a4/sobre-atendimento.png`,
+};
 
 const menuLinks = [
   { label: "Início", href: "#inicio" },
@@ -138,8 +148,8 @@ function BackToTop() {
   );
 }
 
-const SITE_URL = "https://brunanascimentofisio.lovable.app";
-const OG_IMAGE = `${SITE_URL}/__l5e/assets-v1/45c0c2d5-b182-474f-996e-a1dc093f5cf5/logo-bn.png`;
+const SITE_URL = "https://brunanascimentofisio.vercel.app";
+const OG_IMAGE = logoAsset.url;
 const TITLE = "Fisioterapia Dermatofuncional em João Pessoa | Bruna Nascimento";
 const DESCRIPTION =
   "Fisioterapia dermatofuncional em João Pessoa com Bruna Nascimento. Atendimento pós-operatório e pós-parto, laserterapia, taping e tratamento de estrias.";
