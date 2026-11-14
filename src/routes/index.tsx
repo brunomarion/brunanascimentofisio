@@ -576,9 +576,7 @@ function Index() {
                 className="pointer-events-none absolute -right-4 top-1/2 h-auto w-[9rem] max-w-none -translate-y-1/2 select-none opacity-[0.13] sm:w-[12rem] lg:-right-10 lg:w-[15rem]"
               />
               <h1 className="relative font-hero text-[2.5rem] font-bold leading-[1.16] tracking-[-0.015em] sm:text-[3.25rem] lg:text-[4rem] lg:leading-[1.12]">
-                <span className="block text-[#e89a9b]">Fisioterapia</span>
-                <span className="block text-[#9b8168]">Dermatofuncional</span>
-                <span className="block text-[#9b8168]">em João Pessoa</span>
+                Cuidado, autoestima e bem-estar em cada fase da sua transformação.
               </h1>
 
               <Reveal className="mt-6 sm:mt-8 lg:mt-10 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
@@ -720,6 +718,12 @@ function Index() {
               </div>
             </Reveal>
             <div className="mt-6 space-y-4 text-balance-pretty leading-relaxed text-muted-foreground text-start">
+              <h2 className="font-display text-2xl leading-tight text-foreground sm:text-3xl">
+                Fisioterapia dermatofuncional em João Pessoa
+              </h2>
+              <p>
+                Bruna Nascimento é fisioterapeuta dermatofuncional com atendimento em João Pessoa, Paraíba.
+              </p>
               <p>
                 Eu sou Bruna Nascimento, <strong>Fisioterapeuta Dermatofuncional </strong>, especializada no cuidado com a
                 mulher, oferecendo tratamentos personalizados para promover <strong>saúde, recuperação,
@@ -744,7 +748,7 @@ function Index() {
       <section id="especialidades" className="mx-auto max-w-6xl px-5 pb-20 lg:pb-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Minhas Especialidades</span>
-          <h2 className="mt-4 text-3xl sm:text-4xl">Tratamentos com propósito e precisão</h2>
+          <h2 className="mt-4 text-3xl sm:text-4xl">Tratamentos especializados para cuidar de você</h2>
         </Reveal>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {especialidades.map((item, i) => (
@@ -904,7 +908,7 @@ function Index() {
           <div className="space-y-3 text-sm text-muted-foreground">
             <p className="flex items-center gap-2">
               <MapPin className="h-5 w-5 shrink-0 text-primary md:h-4 md:w-4" />
-              João Pessoa - PB
+              Atendimento em João Pessoa – PB
             </p>
             <a
               href={WHATSAPP}
