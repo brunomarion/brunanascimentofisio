@@ -259,19 +259,22 @@ const faq = [
 
 
 const fotosAtendimentos = [
-  "IMG_3847%20(1).PNG",
-  "IMG_3848%20(1).PNG",
-  "IMG_3849%20(1).PNG",
-  "IMG_3850%20(1).PNG",
-  "IMG_3851%20(1).PNG",
-  "IMG_3852%20(1).PNG",
-  "IMG_3853%20(1).PNG",
-  "IMG_3854%20(1).PNG",
-  "IMG_3855%20(1).PNG",
-  "IMG_3856%20(1).PNG",
-  "IMG_3857%20(1).PNG",
-  "IMG_3858%20(1).PNG",
+  "IMG_3847 (1).PNG",
+  "IMG_3848 (1).PNG",
+  "IMG_3849 (1).PNG",
+  "IMG_3850 (1).PNG",
+  "IMG_3851 (1).PNG",
+  "IMG_3852 (1).PNG",
+  "IMG_3853 (1).PNG",
+  "IMG_3854 (1).PNG",
+  "IMG_3855 (1).PNG",
+  "IMG_3856 (1).PNG",
+  "IMG_3857 (1).PNG",
+  "IMG_3858 (1).PNG",
 ];
+
+const fotoUrl = (filename: string) =>
+  `/images/carrossel-atendimentos/${encodeURIComponent(filename)}`;
 
 function AtendimentosGallery() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -351,7 +354,7 @@ function AtendimentosGallery() {
                     >
                       <div className="aspect-[4/5] overflow-hidden">
                         <img
-                          src={`/images/carrossel-atendimentos/${foto}`}
+                          src={fotoUrl(foto)}
                           alt={`Registro de atendimento de fisioterapia dermatofuncional ${index + 1}`}
                           loading={index < 3 ? "eager" : "lazy"}
                           decoding="async"
@@ -417,7 +420,7 @@ function AtendimentosGallery() {
           </button>
           <div className="flex max-h-[88vh] max-w-[min(88vw,1100px)] flex-col items-center">
             <img
-              src={`/images/carrossel-atendimentos/${fotosAtendimentos[lightboxIndex]}`}
+              src={fotoUrl(fotosAtendimentos[lightboxIndex])}
               alt={`Foto ampliada de atendimento ${lightboxIndex + 1}`}
               className="max-h-[78vh] max-w-full rounded-xl object-contain shadow-2xl"
             />
