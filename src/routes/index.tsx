@@ -179,6 +179,7 @@ export const Route = createFileRoute("/")({
       { title: TITLE },
       { name: "description", content: DESCRIPTION },
       { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "google-site-verification", content: "RImR2whxSPRMeajmot4cxP4gOpQZnNdfWVNQQEc_kNY" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:site_name", content: "Bruna Nascimento | Fisioterapia Dermatofuncional" },
       { property: "og:title", content: TITLE },
