@@ -138,19 +138,62 @@ function BackToTop() {
   );
 }
 
-const TITLE = "Bruna Nascimento | Fisioterapeuta Dermatofuncional";
+const SITE_URL = "https://brunanascimentofisio.lovable.app";
+const OG_IMAGE = `${SITE_URL}/__l5e/assets-v1/45c0c2d5-b182-474f-996e-a1dc093f5cf5/logo-bn.png`;
+const TITLE = "Fisioterapia Dermatofuncional em João Pessoa | Bruna Nascimento";
 const DESCRIPTION =
-  "Bruna Nascimento é Fisioterapeuta Dermatofuncional em João Pessoa, especializada no cuidado com a mulher. Atendimento humanizado em pós-parto, pré e pós-operatório, laserterapia, taping terapêutico e tratamento de estrias. Agende sua avaliação.";
+  "Fisioterapia dermatofuncional em João Pessoa com Bruna Nascimento. Pós-operatório, pós-parto, laserterapia, taping terapêutico e tratamento de estrias. Agende sua avaliação.";
+
+const LOCAL_BUSINESS_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Bruna Nascimento | Fisioterapia Dermatofuncional",
+  description: DESCRIPTION,
+  url: SITE_URL,
+  image: OG_IMAGE,
+  telephone: "+5583999072800",
+  priceRange: undefined,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "João Pessoa",
+    addressRegion: "PB",
+    addressCountry: "BR",
+  },
+  areaServed: {
+    "@type": "City",
+    name: "João Pessoa",
+  },
+  serviceType: [
+    "Fisioterapia dermatofuncional",
+    "Fisioterapia pós-operatória",
+    "Fisioterapia no pós-parto",
+    "Laserterapia",
+    "Taping terapêutico",
+    "Tratamento de estrias",
+  ],
+  sameAs: ["https://www.instagram.com/brunanascimento_fisio"],
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: TITLE },
       { name: "description", content: DESCRIPTION },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:type", content: "website" },
+      { property: "og:locale", content: "pt_BR" },
+      { property: "og:site_name", content: "Bruna Nascimento | Fisioterapia Dermatofuncional" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:alt", content: "Identidade visual de Bruna Nascimento, fisioterapeuta dermatofuncional" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: SITE_URL }],
   }),
   component: Index,
 });
@@ -479,6 +522,11 @@ function Index() {
         </div>
       </header>
 
+      <script type="application/ld+json">
+        {JSON.stringify(LOCAL_BUSINESS_SCHEMA)}
+      </script>
+
+      <main id="conteudo">
       {/* HERO */}
       <section id="inicio" className="gradient-soft relative overflow-hidden">
         <div
@@ -530,9 +578,9 @@ function Index() {
                 className="pointer-events-none absolute -right-4 top-1/2 h-auto w-[9rem] max-w-none -translate-y-1/2 select-none opacity-[0.13] sm:w-[12rem] lg:-right-10 lg:w-[15rem]"
               />
               <h1 className="relative font-hero text-[2.5rem] font-bold leading-[1.16] tracking-[-0.015em] sm:text-[3.25rem] lg:text-[4rem] lg:leading-[1.12]">
-                <span className="block text-[#e89a9b]">Cuidado que transforma</span>
-                <span className="block text-[#9b8168]">sua saúde e</span>
-                <span className="block text-[#9b8168]">sua autoestima</span>
+                <span className="block text-[#e89a9b]">Fisioterapia</span>
+                <span className="block text-[#9b8168]">Dermatofuncional</span>
+                <span className="block text-[#9b8168]">em João Pessoa</span>
               </h1>
 
               <Reveal className="mt-6 sm:mt-8 lg:mt-10 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
@@ -615,6 +663,7 @@ function Index() {
               src={sobreAsset.url}
               alt="Bruna Nascimento, fisioterapeuta dermatofuncional, em sua clínica em João Pessoa"
               decoding="async"
+              fetchPriority="high"
               width={1152}
               height={1379}
               className="img-premium relative w-full rounded-[2.5rem] object-cover shadow-soft"
@@ -834,6 +883,7 @@ function Index() {
           </Accordion>
         </Reveal>
       </section>
+      </main>
 
       {/* RODAPÉ */}
       <footer id="contato" className="gradient-soft border-t border-border">
