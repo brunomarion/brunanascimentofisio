@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import {
   Accordion,
   AccordionContent,
@@ -18,6 +19,8 @@ import dep3 from "@/assets/dep-3.jpg";
 import {
   Baby,
   ArrowUp,
+  ChevronLeft,
+  ChevronRight,
   Check,
   ClipboardList,
   HandHeart,
@@ -44,6 +47,7 @@ const menuLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Especialidades", href: "#especialidades" },
+  { label: "Atendimentos", href: "#atendimentos" },
   { label: "Benefícios", href: "#beneficios" },
   { label: "Consultas", href: "#como-funciona" },
   { label: "Depoimentos", href: "#depoimentos" },
@@ -252,6 +256,184 @@ const faq = [
     a: "Atendo todos os dias da semana, pode ficar tranquila. Fale comigo no WhatsApp agora mesmo e agende um melhor horário pra você.",
   },
 ];
+
+
+const fotosAtendimentos = [
+  "IMG_3847%20(1).PNG",
+  "IMG_3848%20(1).PNG",
+  "IMG_3849%20(1).PNG",
+  "IMG_3850%20(1).PNG",
+  "IMG_3851%20(1).PNG",
+  "IMG_3852%20(1).PNG",
+  "IMG_3853%20(1).PNG",
+  "IMG_3854%20(1).PNG",
+  "IMG_3855%20(1).PNG",
+  "IMG_3856%20(1).PNG",
+  "IMG_3857%20(1).PNG",
+  "IMG_3858%20(1).PNG",
+];
+
+function AtendimentosGallery() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "center",
+    loop: true,
+    skipSnaps: false,
+    dragFree: false,
+  });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const openLightbox = useCallback((index: number) => setLightboxIndex(index), []);
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+  const showPreviousPhoto = useCallback(
+    () => setLightboxIndex((current) => current === null ? null : (current - 1 + fotosAtendimentos.length) % fotosAtendimentos.length),
+    [],
+  );
+  const showNextPhoto = useCallback(
+    () => setLightboxIndex((current) => current === null ? null : (current + 1) % fotosAtendimentos.length),
+    [],
+  );
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const updateSelected = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+    updateSelected();
+    emblaApi.on("select", updateSelected);
+    emblaApi.on("reInit", updateSelected);
+    return () => {
+      emblaApi.off("select", updateSelected);
+      emblaApi.off("reInit", updateSelected);
+    };
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowLeft") showPreviousPhoto();
+      if (event.key === "ArrowRight") showNextPhoto();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [lightboxIndex, closeLightbox, showNextPhoto, showPreviousPhoto]);
+
+  return (
+    <>
+      <section id="atendimentos" className="overflow-hidden bg-[#faf7f3] py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-5">
+          <div className="flex flex-col items-center text-center">
+            <span className="text-xs uppercase tracking-[0.25em] text-primary">Um pouco da nossa rotina</span>
+            <h2 className="mt-4 max-w-2xl text-3xl leading-tight text-foreground sm:text-4xl">
+              Cuidado em cada detalhe
+            </h2>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+              Um olhar próximo, técnicas especializadas e acolhimento em cada etapa do seu tratamento.
+            </p>
+          </div>
+
+          <div className="relative mt-12 sm:mt-14">
+            <div className="overflow-visible" ref={emblaRef}>
+              <div className="-ml-4 flex touch-pan-y">
+                {fotosAtendimentos.map((foto, index) => (
+                  <div key={foto} className="min-w-0 flex-[0_0_82%] pl-4 sm:flex-[0_0_48%] lg:flex-[0_0_32%]">
+                    <button
+                      type="button"
+                      onClick={() => openLightbox(index)}
+                      aria-label={`Ampliar foto de atendimento ${index + 1}`}
+                      className="group relative block w-full overflow-hidden rounded-[1.75rem] bg-secondary shadow-[0_18px_45px_-24px_rgba(90,65,45,0.45)] outline-none transition-transform duration-500 hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
+                    >
+                      <div className="aspect-[4/5] overflow-hidden">
+                        <img
+                          src={`/images/carrossel-atendimentos/${foto}`}
+                          alt={`Registro de atendimento de fisioterapia dermatofuncional ${index + 1}`}
+                          loading={index < 3 ? "eager" : "lazy"}
+                          decoding="async"
+                          className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045]"
+                        />
+                      </div>
+                      <span className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-70 transition-opacity group-hover:opacity-100" />
+                      <span className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/50 bg-white/20 text-white opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100">
+                        <ScanHeart className="h-4 w-4" />
+                      </span>
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8 flex items-center justify-between gap-4">
+              <div className="flex items-center gap-2" aria-label={`Foto ${selectedIndex + 1} de ${fotosAtendimentos.length}`}>
+                <span className="font-display text-sm text-foreground">{String(selectedIndex + 1).padStart(2, "0")}</span>
+                <span className="h-px w-10 bg-primary/35" />
+                <span className="text-xs tracking-wider text-muted-foreground">{String(fotosAtendimentos.length).padStart(2, "0")}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <button type="button" onClick={scrollPrev} aria-label="Foto anterior" className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/25 bg-white text-primary transition-all hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                <button type="button" onClick={scrollNext} aria-label="Próxima foto" className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/25 bg-white text-primary transition-all hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+            <div className="mt-5 flex justify-center gap-2" aria-label="Navegação das fotos">
+              {fotosAtendimentos.map((foto, index) => (
+                <button
+                  key={foto}
+                  type="button"
+                  onClick={() => emblaApi?.scrollTo(index)}
+                  aria-label={`Ir para foto ${index + 1}`}
+                  aria-current={selectedIndex === index ? "true" : undefined}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${selectedIndex === index ? "w-8 bg-primary" : "w-1.5 bg-primary/25 hover:bg-primary/50"}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#211b17]/95 p-4 backdrop-blur-md sm:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Visualização ampliada das fotos de atendimento"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) closeLightbox();
+          }}
+        >
+          <button type="button" onClick={closeLightbox} aria-label="Fechar imagem" className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white transition hover:bg-white/20 sm:right-7 sm:top-7">
+            <X className="h-5 w-5" />
+          </button>
+          <button type="button" onClick={showPreviousPhoto} aria-label="Imagem anterior" className="absolute left-2 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white transition hover:bg-white/20 sm:left-7 sm:h-12 sm:w-12">
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <div className="flex max-h-[88vh] max-w-[min(88vw,1100px)] flex-col items-center">
+            <img
+              src={`/images/carrossel-atendimentos/${fotosAtendimentos[lightboxIndex]}`}
+              alt={`Foto ampliada de atendimento ${lightboxIndex + 1}`}
+              className="max-h-[78vh] max-w-full rounded-xl object-contain shadow-2xl"
+            />
+            <p className="mt-4 text-xs tracking-[0.2em] text-white/70">
+              {String(lightboxIndex + 1).padStart(2, "0")} / {String(fotosAtendimentos.length).padStart(2, "0")}
+            </p>
+          </div>
+          <button type="button" onClick={showNextPhoto} aria-label="Próxima imagem" className="absolute right-2 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white transition hover:bg-white/20 sm:right-7 sm:h-12 sm:w-12">
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </div>
+      )}
+    </>
+  );
+}
+
 
 function Index() {
   return (
@@ -530,6 +712,9 @@ function Index() {
           ))}
         </div>
       </section>
+
+      {/* GALERIA DE ATENDIMENTOS */}
+      <AtendimentosGallery />
 
       {/* BENEFÍCIOS */}
       <section id="beneficios" className="bg-secondary py-20 lg:py-28">
