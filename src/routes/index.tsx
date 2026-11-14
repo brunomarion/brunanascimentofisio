@@ -676,9 +676,9 @@ function Index() {
         <Reveal className="lg:hidden">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Sobre mim</span>
           <Reveal delay={80}>
-              <h3 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
+              <h2 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
                 Bruna Nascimento
-              </h3>
+              </h2>
               <div className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
                 <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
                   <Sparkles className="h-4 w-4 shrink-0 text-primary "/>
@@ -709,9 +709,9 @@ function Index() {
             </span>
             <Reveal delay={80} className="hidden lg:block">
 
-              <h3 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
+              <h2 className="mt-7 text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
                 Bruna Nascimento
-              </h3>
+              </h2>
               <div className="mt-4 font-display text-xl leading-snug text-primary sm:text-2xl">
                 <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
                   <Sparkles className="h-4 w-4 shrink-0 text-primary "/>
