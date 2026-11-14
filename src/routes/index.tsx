@@ -801,15 +801,36 @@ function Index() {
         <Reveal className="text-center">
           <span className="text-xs uppercase tracking-[0.25em] text-primary">Como funcionam as consultas</span>
           <h2 className="mt-4 text-3xl sm:text-4xl">Um caminho simples e cuidadoso</h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            Cada etapa é pensada para acolher você e acompanhar sua evolução com atenção.
+          </p>
         </Reveal>
-        <ol className="relative mt-14 space-y-10 border-l border-border pl-10">
+
+        <ol className="relative mt-14">
           {etapas.map((etapa, i) => (
-            <Reveal key={etapa.title} as="li" delay={i * 90} className="relative">
-              <span className="absolute -left-[3.15rem] flex h-10 w-10 items-center justify-center rounded-full bg-primary font-display text-sm text-primary-foreground shadow-card">
-                {i + 1}
+            <Reveal
+              key={etapa.title}
+              as="li"
+              delay={i * 80}
+              className="group relative flex gap-5 pb-10 last:pb-0 sm:gap-7"
+            >
+              {i < etapas.length - 1 && (
+                <span aria-hidden="true" className="absolute bottom-0 left-5 top-10 w-px bg-border sm:left-6">
+                  <span className="block h-full origin-top scale-y-0 bg-[#e89a9b] transition-transform duration-1000 ease-out group-data-[visible=true]:scale-y-100" />
+                </span>
+              )}
+
+              <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-background font-display text-sm font-semibold text-primary shadow-[0_4px_16px_-8px_rgba(188,155,127,0.65)] transition-all duration-700 ease-out group-data-[visible=true]:scale-110 group-data-[visible=true]:border-[#e89a9b] group-data-[visible=true]:bg-[#e89a9b] group-data-[visible=true]:text-white sm:h-12 sm:w-12">
+                {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="text-xl">{etapa.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{etapa.text}</p>
+
+              <div className="min-w-0 flex-1 rounded-2xl border border-border/70 bg-card/70 p-5 shadow-[0_10px_35px_-28px_rgba(90,65,45,0.35)] transition-all duration-700 ease-out group-data-[visible=true]:translate-x-1 group-data-[visible=true]:border-primary/25 group-data-[visible=true]:bg-white group-data-[visible=true]:shadow-[0_18px_45px_-30px_rgba(90,65,45,0.4)] sm:p-6">
+                <span className="text-[10px] font-medium uppercase tracking-[0.22em] text-primary/75">
+                  Etapa {i + 1} de {etapas.length}
+                </span>
+                <h3 className="mt-2 font-display text-xl leading-snug text-foreground sm:text-2xl">{etapa.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">{etapa.text}</p>
+              </div>
             </Reveal>
           ))}
         </ol>
