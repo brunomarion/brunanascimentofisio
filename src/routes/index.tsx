@@ -575,8 +575,8 @@ function Index() {
                 height={221}
                 className="pointer-events-none absolute -right-4 top-1/2 h-auto w-[9rem] max-w-none -translate-y-1/2 select-none opacity-[0.13] sm:w-[12rem] lg:-right-10 lg:w-[15rem]"
               />
-              <h1 className="relative font-hero text-[2.5rem] font-bold leading-[1.16] tracking-[-0.015em] sm:text-[3.25rem] lg:text-[4rem] lg:leading-[1.12]">
-                Cuidado, autoestima e bem-estar em cada fase da sua transformação.
+              <h1 className="relative font-hero text-[2rem] font-bold leading-[1.18] tracking-[-0.015em] sm:text-[3rem] lg:text-[4rem] lg:leading-[1.12]">
+                Cuidado, autoestima e bem-estar em <span className="text-[#e89a9b]">cada fase</span> da sua <span className="text-[#e89a9b]">saúde.</span>
               </h1>
 
               <Reveal className="mt-6 sm:mt-8 lg:mt-10 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-secondary/50 px-4 py-2 text-[10px] tracking-wide text-secondary-foreground sm:text-sm font-sans">
