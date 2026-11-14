@@ -259,22 +259,22 @@ const faq = [
 
 
 const fotosAtendimentos = [
-  "IMG_3847 (1).PNG",
-  "IMG_3848 (1).PNG",
-  "IMG_3849 (1).PNG",
-  "IMG_3850 (1).PNG",
-  "IMG_3851 (1).PNG",
-  "IMG_3852 (1).PNG",
-  "IMG_3853 (1).PNG",
-  "IMG_3854 (1).PNG",
-  "IMG_3855 (1).PNG",
-  "IMG_3856 (1).PNG",
-  "IMG_3857 (1).PNG",
-  "IMG_3858 (1).PNG",
+  "atendimento-01.png",
+  "atendimento-02.png",
+  "atendimento-03.png",
+  "atendimento-04.png",
+  "atendimento-05.png",
+  "atendimento-06.png",
+  "atendimento-07.png",
+  "atendimento-08.png",
+  "atendimento-09.png",
+  "atendimento-10.png",
+  "atendimento-11.png",
+  "atendimento-12.png",
 ];
 
 const fotoUrl = (filename: string) =>
-  `/images/carrossel-atendimentos/${encodeURIComponent(filename)}`;
+  `/images/carrossel-atendimentos/${filename}`;
 
 function AtendimentosGallery() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
