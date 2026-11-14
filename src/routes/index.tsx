@@ -142,7 +142,7 @@ const SITE_URL = "https://brunanascimentofisio.lovable.app";
 const OG_IMAGE = `${SITE_URL}/__l5e/assets-v1/45c0c2d5-b182-474f-996e-a1dc093f5cf5/logo-bn.png`;
 const TITLE = "Fisioterapia Dermatofuncional em João Pessoa | Bruna Nascimento";
 const DESCRIPTION =
-  "Fisioterapia dermatofuncional em João Pessoa com Bruna Nascimento. Pós-operatório, pós-parto, laserterapia, taping terapêutico e tratamento de estrias. Agende sua avaliação.";
+  "Fisioterapia dermatofuncional em João Pessoa com Bruna Nascimento. Atendimento pós-operatório e pós-parto, laserterapia, taping e tratamento de estrias.";
 
 const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
@@ -152,7 +152,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   url: SITE_URL,
   image: OG_IMAGE,
   telephone: "+5583999072800",
-  priceRange: undefined,
   address: {
     "@type": "PostalAddress",
     addressLocality: "João Pessoa",
@@ -180,7 +179,6 @@ export const Route = createFileRoute("/")({
       { title: TITLE },
       { name: "description", content: DESCRIPTION },
       { name: "robots", content: "index, follow, max-image-preview:large" },
-      { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:site_name", content: "Bruna Nascimento | Fisioterapia Dermatofuncional" },
       { property: "og:title", content: TITLE },
@@ -188,7 +186,7 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: SITE_URL },
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:alt", content: "Identidade visual de Bruna Nascimento, fisioterapeuta dermatofuncional" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image:type", content: "image/png" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
       { name: "twitter:image", content: OG_IMAGE },
