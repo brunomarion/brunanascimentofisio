@@ -881,7 +881,7 @@ function Index() {
             className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-background px-9 py-4 text-sm font-medium text-primary shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-background/90"
           >
             <MessageCircle className="h-4 w-4" />
-            Quero agendar agora
+            Fale comigo agora
           </a>
         </Reveal>
       </section>
@@ -968,7 +968,7 @@ function Index() {
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/25 text-primary transition-colors hover:bg-secondary"
               >
-                <Instagram className="h-5 w-5 md:h-4 md:w-4" />
+                <Instagram className="h-7 w-7 sm:h-8 sm:w-8" strokeWidth={1.8} />
               </a>
             </div>
           </div>
